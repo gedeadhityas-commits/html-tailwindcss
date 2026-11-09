@@ -1,8 +1,7 @@
 {
   "name": "igas-store-tailwindcss",
   "version": "1.0.0",
-  "description": "IGAS STORE Toko Urban - Tailwind CSS v4.3.5 CLI Edition",
-  "main": "server.js",
+  "description": "IGAS STORE Toko Urban - Tailwind CSS v4.3.5",
   "scripts": {
     "dev": "tailwindcss -i style.css -o dist/output.css --watch",
     "build": "tailwindcss -i style.css -o dist/output.css --minify",
@@ -11,7 +10,6 @@
   "keywords": [
     "tailwindcss",
     "tailwind-v4",
-    "tailwind-cli",
     "ecommerce"
   ],
   "author": "IGAS STORE",
