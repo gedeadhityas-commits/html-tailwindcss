@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAcid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="acidBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="shadowAcid" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgAcid)" rx="24"/>
+  <ellipse cx="300" cy="390" rx="190" ry="20" fill="#1e293b" opacity="0.14"/>
+  <g filter="url(#shadowAcid)" transform="translate(60, 25)">
+    <!-- Acid Washed Base Body -->
+    <path d="M185 80 C215 102 265 102 295 80 L385 125 L355 185 L330 170 L330 355 L150 355 L150 170 L125 185 L95 125 Z" fill="url(#acidBase)"/>
+    <!-- Distressed / Acid Wash Cloud Blotches -->
+    <ellipse cx="210" cy="180" rx="35" ry="20" fill="#64748b" opacity="0.5"/>
+    <ellipse cx="270" cy="220" rx="45" ry="25" fill="#64748b" opacity="0.5"/>
+    <ellipse cx="190" cy="270" rx="30" ry="18" fill="#64748b" opacity="0.5"/>
+    <ellipse cx="280" cy="310" rx="40" ry="22" fill="#64748b" opacity="0.5"/>
+    <ellipse cx="230" cy="130" rx="25" ry="15" fill="#64748b" opacity="0.5"/>
+    <ellipse cx="125" cy="155" rx="15" ry="12" fill="#64748b" opacity="0.5"/>
+    <ellipse cx="355" cy="155" rx="15" ry="12" fill="#64748b" opacity="0.5"/>
+    <!-- Distressed Rib Collar -->
+    <path d="M185 80 C215 105 265 105 295 80 L288 90 C263 112 217 112 192 90 Z" fill="#1e293b"/>
+    <!-- Grunge Typography Stamped -->
+    <text x="240" y="210" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="900" text-anchor="middle" letter-spacing="4">UNDERGROUND</text>
+    <text x="240" y="230" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="3">ACID WASH EDITION</text>
+  </g>
+</svg>

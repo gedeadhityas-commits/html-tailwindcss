@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgRunSing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2"/>
+      <stop offset="100%" stop-color="#ffe4e6"/>
+    </linearGradient>
+    <linearGradient id="singletBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <filter id="shadowRunSing" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#881337" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgRunSing)" rx="24"/>
+  <ellipse cx="300" cy="390" rx="180" ry="18" fill="#881337" opacity="0.14"/>
+  <g filter="url(#shadowRunSing)" transform="translate(60, 25)">
+    <!-- Racerback / Sleeveless Singlet Cut -->
+    <path d="M190 75 C215 95 265 95 290 75 L310 100 C300 135 295 160 315 180 L315 350 L165 350 L165 180 C185 160 180 135 170 100 Z" fill="url(#singletBody)"/>
+    <!-- Deep Armhole Trim -->
+    <path d="M170 100 C180 135 185 160 165 180 L160 175 C178 158 174 135 165 105 Z" fill="#ffffff"/>
+    <path d="M310 100 C300 135 295 160 315 180 L320 175 C302 158 306 135 315 105 Z" fill="#ffffff"/>
+    <!-- Neck Binding -->
+    <path d="M190 75 C215 95 265 95 290 75 L285 85 C263 102 217 102 195 85 Z" fill="#ffffff"/>
+    <!-- Perforated Laser Cut Holes Graphic -->
+    <g fill="#ffffff" opacity="0.8">
+      <circle cx="240" cy="140" r="3"/>
+      <circle cx="230" cy="150" r="3"/>
+      <circle cx="250" cy="150" r="3"/>
+      <circle cx="220" cy="160" r="3"/>
+      <circle cx="240" cy="160" r="3"/>
+      <circle cx="260" cy="160" r="3"/>
+      <circle cx="230" cy="170" r="3"/>
+      <circle cx="250" cy="170" r="3"/>
+    </g>
+    <!-- Dynamic Reflector Striping -->
+    <rect x="185" y="240" width="110" height="4" rx="2" fill="#ffffff"/>
+    <text x="240" y="225" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" text-anchor="middle" letter-spacing="4">SPEED</text>
+    <text x="240" y="280" fill="#ffffff" opacity="0.9" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="2">42.195 KM</text>
+  </g>
+</svg>

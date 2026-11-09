@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Sepatu Urban | Toko Urban</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('igas_theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Komponen Header dan Navbar -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-name">
+                <span class="brand-accent">IGAS</span> STORE
+            </a>
+            <nav class="navbar" id="mainNavbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#produk" class="nav-link active">Produk</a></li>
+                    <li><a href="index.html#mix-match" class="nav-link">Mix &amp; Match</a></li>
+                    <li><a href="index.html#cara-belanja" class="nav-link">Cara Belanja</a></li>
+                    <li><a href="index.html#tentang" class="nav-link">Tentang</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="index.html#kontak" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions-group">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Ganti Mode Gelap atau Terang" title="Ganti Tema Mode Gelap / Terang">
+                    <svg class="theme-toggle-icon" id="themeToggleIcon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span id="themeToggleText">Mode Gelap</span>
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20tanya%20produk" target="_blank" rel="noopener noreferrer" class="header-cta-btn">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Chat Admin</span>
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <!-- Tautan Navigasi Kembali -->
+        <nav class="breadcrumb-nav">
+            <a href="index.html#produk" class="back-link">&larr; Kembali ke Katalog</a>
+        </nav>
+
+        <!-- Kotak Detail Produk -->
+        <article class="product-detail-card">
+            <!-- Kolom Kiri: Gambar Produk Studio HD -->
+            <div class="detail-image-column">
+                <img id="detailMainImgSepatu" src="images/sepatu-urban-hd.jpg" alt="Foto Sepatu Urban hitam sporty" class="detail-product-image" width="640" height="480">
+                <div class="detail-thumbnails-row" id="detailThumbnailsContainer">
+                    <button type="button" class="detail-thumb-btn active" data-src="images/sepatu-urban-hd.jpg">
+                        <img src="images/sepatu-urban-hd.jpg" alt="Angle Utama">
+                        <span>Angle Utama</span>
+                    </button>
+                    <button type="button" class="detail-thumb-btn" data-src="images/sepatu-urban-side.jpg">
+                        <img src="images/sepatu-urban-side.jpg" alt="Angle Samping">
+                        <span>Tampak Samping</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Informasi & Pembelian Produk -->
+            <div class="detail-info-column">
+                <p class="detail-category" id="detailCategory">SEPATU KASUAL</p>
+                <h1 class="detail-title" id="detailTitle">Sepatu Urban</h1>
+                <p class="detail-price" id="detailPrice">Rp1.799.000</p>
+                <p class="detail-description" id="detailDesc">
+                    Sepatu kasual ringan yang dirancang khusus untuk kenyamanan aktivitas sehari-hari di perkotaan. Menggabungkan gaya minimalis kontemporer dengan durabilitas tinggi untuk menemani langkah aktif Anda dari pagi hingga malam.
+                </p>
+
+                <!-- Daftar Keunggulan Produk -->
+                <div class="features-block">
+                    <h2 class="features-heading">Keunggulan Produk:</h2>
+                    <ul class="product-features" id="detailFeatures">
+                        <li>Bahan kanvas ringan</li>
+                        <li>Sol karet antiselip</li>
+                        <li>Bantalan empuk</li>
+                    </ul>
+                </div>
+
+                <!-- Pilihan Ukuran / Varian (Flexbox) -->
+                <div class="size-section">
+                    <p class="size-title" id="detailOptionTitle">Pilih Ukuran:</p>
+                    <div class="size-options" id="detailOptionsContainer">
+                        <button type="button" class="size-btn active">39</button>
+                        <button type="button" class="size-btn">40</button>
+                        <button type="button" class="size-btn">41</button>
+                        <button type="button" class="size-btn">42</button>
+                    </div>
+                </div>
+
+                <!-- Tombol Aksi Utama -->
+                <button type="button" class="buy-now-btn" id="btn-buy-sepatu">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Beli Sekarang via WhatsApp</span>
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Komponen Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-brand"><strong>TOKO URBAN</strong> — Teman nyaman untuk langkah sehari-hari.</p>
+            <nav class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="index.html#tentang">Tentang Kami</a></li>
+                    <li><a href="index.html#cara-belanja">Cara Belanja</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copyright">&copy; 2026 Toko Urban. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Hubungi WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Database 22 Produk Katalog Toko Urban (Menggunakan Foto Studio HD yang Konsisten)
+        const CATALOG_PRODUCTS = {
+            'sepatu-urban': {
+                category: 'SEPATU KASUAL',
+                title: 'Sepatu Urban',
+                price: 'Rp1.799.000',
+                image: 'images/sepatu-urban-hd.jpg',
+                thumbnails: [
+                    { src: 'images/sepatu-urban-hd.jpg', label: 'Angle Utama' },
+                    { src: 'images/sepatu-urban-side.jpg', label: 'Tampak Samping' }
+                ],
+                desc: 'Sepatu kasual ringan yang dirancang khusus untuk kenyamanan aktivitas sehari-hari di perkotaan. Menggabungkan gaya minimalis kontemporer dengan durabilitas tinggi untuk menemani langkah aktif Anda dari pagi hingga malam.',
+                features: ['Bahan kanvas ringan', 'Sol karet antiselip', 'Bantalan empuk'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['39', '40', '41', '42']
+            },
+            'sepatu-running': {
+                category: 'SEPATU RUNNING & TRAINING',
+                title: 'AeroGlide Running Pro',
+                price: 'Rp459.000',
+                image: 'images/sepatu-running.jpg',
+                thumbnails: [
+                    { src: 'images/sepatu-running.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Sepatu lari ultralight dengan bantalan responsive rebound cushion, konstruksi mesh sirkulasi udara optimal, dan grip traksi jalan raya tahan licin untuk performa lari maupun latihan harian.',
+                features: ['Upper engineered breathable mesh', 'Midsole rebound cushion empuk & responsif', 'Outsole karet traksi jalan raya antiselip'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['39', '40', '41', '42', '43', '44']
+            },
+            'sepatu-retro': {
+                category: 'SNEAKER KASUAL RETRO',
+                title: 'Retro Classic Sneaker',
+                price: 'Rp389.000',
+                image: 'images/sepatu-retro.jpg',
+                thumbnails: [
+                    { src: 'images/sepatu-retro.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Siluet court sneaker vintage era 80-an berbalut kulit sintetis premium putih bersih dengan aksen suede abu-abu muda dan sol gum karet klasik yang timeless, rapi, serta tahan lama.',
+                features: ['Material kulit sintetis premium mudah dibersihkan', 'Pelindung ujung kaki suede bertekstur', 'Outsole honey gum rubber klasik anti aus'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['39', '40', '41', '42', '43']
+            },
+            'sepatu-slipon': {
+                category: 'SLIP-ON SANTAI & KERJA',
+                title: 'EasyWalk Slip-On Knit',
+                price: 'Rp329.000',
+                image: 'images/sepatu-slipon.jpg',
+                thumbnails: [
+                    { src: 'images/sepatu-slipon.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Sepatu slip-on praktis tanpa tali dengan rajutan 3D stretch-knit fleksibel yang membungkus kaki dengan lembut dan menjaga sirkulasi udara tetap sejuk sepanjang hari.',
+                features: ['Desain slip-on praktis tanpa ikat tali', 'Rajutan 3D knit elastis & bebas gerah', 'Insole memory foam super ringan'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['38', '39', '40', '41', '42', '43', '44']
+            },
+            'sepatu-hightop': {
+                category: 'SNEAKER HIGH-TOP URBAN',
+                title: 'High-Top Streetwear Matrix',
+                price: 'Rp549.000',
+                image: 'images/sepatu-hightop.jpg',
+                thumbnails: [
+                    { src: 'images/sepatu-hightop.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Sneaker potongan tinggi (high-top) dengan perpaduan kanvas tebal dan kulit matte hitam serta sol platform kokoh yang memberi perlindungan pergelangan kaki dan tampilan streetwear modern.',
+                features: ['Kerah high-top pelindung pergelangan kaki', 'Sol platform chunky karet kokoh', 'Kanvas heavy-duty tahan gesekan'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['40', '41', '42', '43', '44']
+            },
+            'sepatu-trail': {
+                category: 'SANDAL GUNUNG & PETUALANG',
+                title: 'Terra Adventure Sandal Hiking',
+                price: 'Rp279.000',
+                image: 'images/sepatu-trail.jpg',
+                thumbnails: [
+                    { src: 'images/sepatu-trail.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Sandal outdoor serbaguna dengan tali webbing nilon heavy-duty cepat kering dan sol lug bergerigi dalam yang siap menemani hiking ringan, traveling, maupun mobilitas di musim hujan.',
+                features: ['Tali webbing nilon quick-dry dengan kunci buckle', 'Footbed berkontur anatomis anti pegal', 'Sol karet traksi lug bergerigi tahan medan basah'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['39', '40', '41', '42', '43']
+            },
+            'tas-ransel': {
+                category: 'TAS & AKSESORIS URBAN',
+                title: 'Tas Ransel Urban',
+                price: 'Rp349.000',
+                image: 'images/tas-ransel.jpg',
+                thumbnails: [
+                    { src: 'images/tas-ransel.jpg', label: 'Angle Utama' },
+                    { src: 'images/tas-ransel-side.jpg', label: 'Tampak Samping' }
+                ],
+                desc: 'Tas ransel komuter ergonomis dengan slot laptop empuk berukuran hingga 15.6 inci dan material kanvas tahan percikan air untuk mobilitas kerja, kuliah, dan traveling.',
+                features: ['Material kanvas water-repellent tahan percikan air', 'Kompartemen laptop empuk hingga 15.6 inci', 'Punggung dan tali bahu berlapis busa breathable'],
+                optionLabel: 'Pilih Warna:',
+                options: ['Hitam', 'Abu-abu', 'Hijau Army']
+            },
+            'tas-sling': {
+                category: 'TAS SELEMPANG & CROSSBODY',
+                title: 'Sling Bag Crossbody Pro',
+                price: 'Rp189.000',
+                image: 'images/tas-sling.jpg',
+                thumbnails: [
+                    { src: 'images/tas-sling.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Tas selempang komuter berdesain minimalis dan ringkas dari bahan Cordura water-repellent, dilengkapi ritsleting tahan air serta ruang terorganisir untuk tablet 8.3 inci, ponsel, dan dompet.',
+                features: ['Bahan Cordura water-repellent & waterproof zipper', 'Kompartemen tablet/iPad Mini berlapis busa', 'Tali selempang nilon halus dengan quick-adjust'],
+                optionLabel: 'Pilih Warna:',
+                options: ['Hitam Matte', 'Abu Slate', 'Hijau Emerald']
+            },
+            'tas-duffle': {
+                category: 'TAS GYM & WEEKEND TRAVEL',
+                title: 'Duffle Gym & Travel 35L',
+                price: 'Rp379.000',
+                image: 'images/tas-duffle.jpg',
+                thumbnails: [
+                    { src: 'images/tas-duffle.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Tas duffle silinder berkapasitas 35 liter dengan kompartemen khusus sepatu berventilasi terpisah di bagian samping, sangat ideal untuk olahraga gym maupun perjalanan akhir pekan.',
+                features: ['Kapasitas lega 35 liter dengan bukaan lebar', 'Kantong khusus sepatu terpisah & berventilasi', 'Bahan Oxford tebal tahan air & tali bahu empuk'],
+                optionLabel: 'Pilih Warna:',
+                options: ['Charcoal Slate', 'Hitam Jet', 'Olive Green']
+            },
+            'tas-waistbag': {
+                category: 'TAS PINGGANG & RIDING',
+                title: 'Stealth Rider Waistbag',
+                price: 'Rp159.000',
+                image: 'images/tas-waistbag.jpg',
+                thumbnails: [
+                    { src: 'images/tas-waistbag.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Waistbag aerodinamis berbahan nilon balistik 1000D tahan gesek dengan sabuk pengunci kokoh dan aksen strip reflektif untuk visibilitas ekstra saat berkendara di malam hari.',
+                features: ['Material nilon balistik 1000D super tangguh', 'Garis reflektif pengaman berkendara malam', 'Gesper pengunci quick-release heavy duty'],
+                optionLabel: 'Pilih Warna:',
+                options: ['Hitam Stealth', 'Abu Gunmetal']
+            },
+            'tas-tote': {
+                category: 'TOTE BAG CASUAL & KULIAH',
+                title: 'Tote Bag Canvas Minimalist',
+                price: 'Rp169.000',
+                image: 'images/tas-tote.jpg',
+                thumbnails: [
+                    { src: 'images/tas-tote.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Tote bag struktural berbahan kanvas katun tebal 14oz warna natural off-white dengan dasar hijau tua yang kokoh, dilengkapi penutup ritsleting utama dan sekat laptop 14 inci.',
+                features: ['Kanvas katun 14oz tebal & ramah lingkungan', 'Penutup ritsleting utama penuh yang aman', 'Sekat dalam berlapis busa muat laptop 14 inci'],
+                optionLabel: 'Pilih Varian:',
+                options: ['Cream / Forest Green', 'Cream / Navy Blue', 'Full Black Canvas']
+            },
+            'tas-briefcase': {
+                category: 'TAS KERJA & KANTOR PROFESIONAL',
+                title: 'Executive Laptop Briefcase',
+                price: 'Rp399.000',
+                image: 'images/tas-briefcase.jpg',
+                thumbnails: [
+                    { src: 'images/tas-briefcase.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Tas kerja eksekutif ramping dengan busa peredam benturan memory foam tebal untuk laptop 15.6 inci, saku depan ganda untuk aksesori kerja, dan sabuk belakang untuk pegangan koper.',
+                features: ['Pelindung laptop 15.6" berbusa shockproof', 'Pegangan tangan berlapis kulit sintetis lembut', 'Sabuk belakang terintegrasi untuk troli koper'],
+                optionLabel: 'Pilih Warna:',
+                options: ['Slate Black', 'Deep Navy']
+            },
+            'jersey-active': {
+                category: 'JERSEY OLAHRAGA & GYM',
+                title: 'Jersey Urban Active Dry-Fit',
+                price: 'Rp149.000',
+                image: 'images/jersey-active.jpg',
+                thumbnails: [
+                    { src: 'images/jersey-active.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Jersey olahraga performa tinggi dengan kain micro-mesh berteknologi Dry-Fit Pro yang menyerap dan menguapkan keringat seketika, menjaga tubuh tetap sejuk saat lari maupun latihan gym.',
+                features: ['Kain micro-mesh Dry-Fit cepat kering & ringan', 'Teknologi anti-bakteri pencegah bau keringat', 'Jahitan flatlock halus bebas lecet di kulit'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL', 'XXL']
+            },
+            'jersey-heritage': {
+                category: 'JERSEY BOLA VINTAGE',
+                title: 'Heritage Football Kit 90s',
+                price: 'Rp189.000',
+                image: 'images/jersey-heritage.jpg',
+                thumbnails: [
+                    { src: 'images/jersey-heritage.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Jersey sepak bola bergaya blokkcore era keemasan 90-an dengan kerah polo putih klasik, rajutan motif jacquard mengilap, emblem perisai bordir, dan potongan kasual yang keren dipakai nongkrong.',
+                features: ['Kerah polo rajut klasik bergaya retro 90s', 'Kain poliester jacquard bertekstur lembut', 'Emblem dada woven patch & sablon tahan cuci'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['M', 'L', 'XL', 'XXL']
+            },
+            'jersey-running': {
+                category: 'SINGLET LARI & MARATHON',
+                title: 'AeroSpeed Running Singlet',
+                price: 'Rp129.000',
+                image: 'images/jersey-running.jpg',
+                thumbnails: [
+                    { src: 'images/jersey-running.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Singlet lari marathon tanpa lengan dengan bobot super ringan hanya 85 gram, dilengkapi perforasi ventilasi laser-cut di area dada dan punggung untuk pelepasan panas maksimal.',
+                features: ['Bobot ultralight hanya 85 gram', 'Lubang ventilasi laser-cut di zona keringat', 'Aksen strip reflektif untuk lari pagi/malam'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL']
+            },
+            'jersey-street': {
+                category: 'JERSEY BASKET & STREETWEAR',
+                title: 'Streetwear Basketball Kit',
+                price: 'Rp199.000',
+                image: 'images/jersey-street.jpg',
+                thumbnails: [
+                    { src: 'images/jersey-street.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Jersey basket berpotongan boxy oversized dengan material heavy-gauge athletic mesh hitam pekat, rib rajut belang emas-ungu di kerah dan lengan, serta aplikasi nomor dada berkualitas tinggi.',
+                features: ['Bahan heavy-gauge mesh berpori tebal & jatuh', 'Rib kerah dan lingkar lengan rajut dua warna', 'Potongan boxy fit cocok untuk layering kaos'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['M', 'L', 'XL', 'XXL']
+            },
+            'jersey-cycling': {
+                category: 'JERSEY SEPEDA ROAD & GRAVEL',
+                title: 'Commuter Pro Cycling Jersey',
+                price: 'Rp229.000',
+                image: 'images/jersey-cycling.jpg',
+                thumbnails: [
+                    { src: 'images/jersey-cycling.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Jersey sepeda aerodinamis dengan ritsleting depan penuh (full-zip), kerah rendah nyaman, 3 saku belakang elastis untuk botol/ponsel, serta manset lengan hi-vis neon terang.',
+                features: ['Ritsleting depan penuh (full-length zipper) praktis', '3 saku belakang elastis + silikon gripper pinggang', 'Bahan spandeks lycra aerodinamis UV-protection'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL']
+            },
+            'tshirt-oversized': {
+                category: 'KAOS POLOS OVERSIZE',
+                title: 'Heavyweight Oversized Tee 24s',
+                price: 'Rp119.000',
+                image: 'images/tshirt-oversized.jpg',
+                thumbnails: [
+                    { src: 'images/tshirt-oversized.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Kaos esensial potongan boxy drop-shoulder dari bahan 100% katun combed 24s tebal yang lembut, tidak menerawang, serta dilengkapi rib leher 3cm yang kokoh dan tidak mudah melar.',
+                features: ['100% Cotton Combed 24s tebal & menyerap keringat', 'Pola boxy oversized dengan bahu turun (drop-shoulder)', 'Rib kerah crew neck tebal anti melar'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL', 'XXL']
+            },
+            'tshirt-graphic': {
+                category: 'KAOS GRAFIS DISTRO',
+                title: 'Vintage Tokyo Graphic Tee',
+                price: 'Rp139.000',
+                image: 'images/tshirt-graphic.jpg',
+                thumbnails: [
+                    { src: 'images/tshirt-graphic.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Kaos streetwear warna broken-white dengan ilustrasi grafis retro Tokyo di bagian dada, dicetak menggunakan tinta plastisol curing matte yang tajam, lentur, dan tidak pecah saat dicuci.',
+                features: ['Katun combed premium warna broken-white/cream', 'Sablon plastisol HD matte tahan setrika & cuci', 'Jahitan rantai standar ekspor rapi & kuat'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL']
+            },
+            'tshirt-pocket': {
+                category: 'KAOS SAKU DADA KASUAL',
+                title: 'Minimalist Pocket Tee 30s',
+                price: 'Rp109.000',
+                image: 'images/tshirt-pocket.jpg',
+                thumbnails: [
+                    { src: 'images/tshirt-pocket.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Kaos harian super adem dari 100% katun combed 30s warna hijau botol (forest green), dipermanis dengan saku dada fungsional beraksen label kulit sintetis minimalis.',
+                features: ['100% Cotton Combed 30s ekstra sejuk & ringan', 'Saku dada kiri dengan detail woven leather tag', 'Mudah dipadukan untuk gaya santai maupun kemeja luar'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL', 'XXL']
+            },
+            'tshirt-acidwash': {
+                category: 'KAOS WASHED STREETWEAR',
+                title: 'Acid Wash Grunge Tee',
+                price: 'Rp149.000',
+                image: 'images/tshirt-acidwash.jpg',
+                thumbnails: [
+                    { src: 'images/tshirt-acidwash.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Kaos streetwear yang melalui proses mineral acid-washing autentik sehingga menghasilkan tekstur warna abu-abu charcoal vintage bergradasi unik dan kain yang terasa sangat lembut.',
+                features: ['Proses mineral acid-wash asli berkarakter vintage', 'Bahan katun tebal yang telah melalui pre-shrunk (anti susut)', 'Potongan relaxed fit nyaman untuk gaya harian'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['M', 'L', 'XL', 'XXL']
+            },
+            'tshirt-stripe': {
+                category: 'KAOS SALUR GARIS KLASIK',
+                title: 'Breton Stripe Nautical Tee',
+                price: 'Rp129.000',
+                image: 'images/tshirt-stripe.jpg',
+                thumbnails: [
+                    { src: 'images/tshirt-stripe.jpg', label: 'Studio Utama' }
+                ],
+                desc: 'Kaos salur horizontal biru navy dan putih bergaya maritim Parisian yang dirajut dari benang celup asli (yarn-dyed cotton), menghasilkan warna garis yang tajam dan tidak pernah luntur.',
+                features: ['Rajutan benang celup asli (yarn-dyed) anti pudar', 'Kerah rib solid navy blue dengan bordir dada minimalis', 'Kain katun lembut, adem, dan tidak mudah kusut'],
+                optionLabel: 'Pilih Ukuran:',
+                options: ['S', 'M', 'L', 'XL']
+            }
+        };
+
+        // Ambil parameter ?id= dari URL (default ke 'sepatu-urban' jika tidak ada)
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id') || 'sepatu-urban';
+        const product = CATALOG_PRODUCTS[productId] || CATALOG_PRODUCTS['sepatu-urban'];
+
+        // Elemen DOM
+        const detailMainImg = document.getElementById('detailMainImgSepatu');
+        const thumbsContainer = document.getElementById('detailThumbnailsContainer');
+        const detailCategory = document.getElementById('detailCategory');
+        const detailTitle = document.getElementById('detailTitle');
+        const detailPrice = document.getElementById('detailPrice');
+        const detailDesc = document.getElementById('detailDesc');
+        const detailFeatures = document.getElementById('detailFeatures');
+        const detailOptionTitle = document.getElementById('detailOptionTitle');
+        const detailOptionsContainer = document.getElementById('detailOptionsContainer');
+
+        // Render Data Produk secara Konsisten dengan Katalog
+        document.title = `Detail Produk - ${product.title} | Toko Urban`;
+        detailMainImg.src = product.image;
+        detailMainImg.alt = `Foto Studio HD ${product.title}`;
+        detailCategory.textContent = product.category;
+        detailTitle.textContent = product.title;
+        detailPrice.textContent = product.price;
+        detailDesc.textContent = product.desc;
+
+        // Render Keunggulan Produk (<ul>)
+        detailFeatures.innerHTML = product.features
+            .map(feat => `<li>${feat}</li>`)
+            .join('');
+
+        // Render Thumbnails Foto Studio HD
+        thumbsContainer.innerHTML = product.thumbnails
+            .map((thumb, idx) => `
+                <button type="button" class="detail-thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${thumb.src}">
+                    <img src="${thumb.src}" alt="${thumb.label}">
+                    <span>${thumb.label}</span>
+                </button>
+            `)
+            .join('');
+
+        // Pasang event listener untuk ganti foto thumbnail
+        const detailThumbBtns = thumbsContainer.querySelectorAll('.detail-thumb-btn');
+        detailThumbBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const newSrc = btn.getAttribute('data-src');
+                if (newSrc && detailMainImg) {
+                    detailMainImg.style.opacity = '0.3';
+                    setTimeout(() => {
+                        detailMainImg.src = newSrc;
+                        detailMainImg.style.opacity = '1';
+                    }, 120);
+
+                    detailThumbBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                }
+            });
+        });
+
+        // Render Pilihan Ukuran / Warna
+        detailOptionTitle.textContent = product.optionLabel;
+        let selectedOption = product.options[0];
+        detailOptionsContainer.innerHTML = product.options
+            .map((opt, idx) => `<button type="button" class="size-btn ${idx === 0 ? 'active' : ''}">${opt}</button>`)
+            .join('');
+
+        const sizeButtons = detailOptionsContainer.querySelectorAll('.size-btn');
+        sizeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sizeButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedOption = btn.innerText.trim();
+            });
+        });
+
+        // Beli sekarang via WhatsApp
+        document.getElementById('btn-buy-sepatu').addEventListener('click', () => {
+            const message = encodeURIComponent(`Halo Toko Urban (IGAS STORE), saya tertarik membeli ${product.title} (${product.optionLabel.replace(':', '')}: ${selectedOption}) dengan harga ${product.price}. Apakah stok masih tersedia?`);
+            window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+        });
+
+        // Dark Mode Toggle & Mobile Menu di Halaman Detail Produk
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeToggleIcon = document.getElementById('themeToggleIcon');
+        const themeToggleText = document.getElementById('themeToggleText');
+
+        const MOON_SVG_PATH = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        const SUN_SVG_PATH = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+
+        const syncThemeUI = (theme) => {
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                if (themeToggleIcon) themeToggleIcon.innerHTML = SUN_SVG_PATH;
+                if (themeToggleText) themeToggleText.textContent = 'Mode Terang';
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                if (themeToggleIcon) themeToggleIcon.innerHTML = MOON_SVG_PATH;
+                if (themeToggleText) themeToggleText.textContent = 'Mode Gelap';
+            }
+        };
+
+        syncThemeUI(localStorage.getItem('igas_theme') || 'light');
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('igas_theme', nextTheme);
+                syncThemeUI(nextTheme);
+            });
+        }
+
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNavbar = document.getElementById('mainNavbar');
+        if (mobileMenuToggle && mainNavbar) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isOpen = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+                mobileMenuToggle.classList.toggle('active');
+                mainNavbar.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

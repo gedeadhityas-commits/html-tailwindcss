@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgJActive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <linearGradient id="jerseyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#115e59"/>
+    </linearGradient>
+    <filter id="shadowJActive" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#042f2e" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgJActive)" rx="24"/>
+  <ellipse cx="300" cy="390" rx="190" ry="20" fill="#042f2e" opacity="0.14"/>
+  <g filter="url(#shadowJActive)" transform="translate(60, 25)">
+    <!-- T-Shirt/Jersey Silhouette (Body + Sleeves) -->
+    <path d="M190 70 C220 90 260 90 290 70 L380 115 L350 170 L320 155 L320 350 L160 350 L160 155 L130 170 L100 115 Z" fill="url(#jerseyGrad)"/>
+    <!-- Collar V-Neck Trim -->
+    <path d="M190 70 C220 100 260 100 290 70 L280 85 C255 110 225 110 200 85 Z" fill="#34d399"/>
+    <!-- Sleeve Cuffs -->
+    <polygon points="100,115 130,170 120,175 90,120" fill="#34d399"/>
+    <polygon points="380,115 350,170 360,175 390,120" fill="#34d399"/>
+    <!-- Side Aeration Breathable Mesh Panels -->
+    <path d="M160 155 L180 180 L180 350 L160 350 Z" fill="#042f2e" opacity="0.4"/>
+    <path d="M320 155 L300 180 L300 350 L320 350 Z" fill="#042f2e" opacity="0.4"/>
+    <!-- Modern Speed Diagonal Lines -->
+    <line x1="180" y1="210" x2="300" y2="170" stroke="#34d399" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+    <line x1="180" y1="230" x2="300" y2="190" stroke="#34d399" stroke-width="6" stroke-linecap="round"/>
+    <line x1="180" y1="250" x2="300" y2="210" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <!-- Crest / Chest Logo -->
+    <circle cx="210" cy="140" r="14" fill="#34d399"/>
+    <polygon points="210,132 214,142 224,143 216,149 219,158 210,153 201,158 204,149 196,143 206,142" fill="#042f2e"/>
+    <text x="240" y="295" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" text-anchor="middle" letter-spacing="3">URBAN</text>
+    <text x="240" y="315" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="2">DRY-FIT PRO</text>
+  </g>
+</svg>

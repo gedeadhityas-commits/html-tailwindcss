@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgRetro" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="soleRetro" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="shadowRetro" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#334155" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgRetro)" rx="24"/>
+  <ellipse cx="300" cy="375" rx="210" ry="22" fill="#475569" opacity="0.16"/>
+  <g filter="url(#shadowRetro)" transform="translate(45, 30)">
+    <!-- Vintage Gum Rubber Sole -->
+    <path d="M85 300 C150 305 350 305 460 280 C470 310 445 325 380 330 C240 335 120 330 85 300 Z" fill="url(#soleRetro)"/>
+    <line x1="100" y1="315" x2="440" y2="305" stroke="#b45309" stroke-width="2" stroke-dasharray="6,4"/>
+    <!-- Crisp White Leather Upper -->
+    <path d="M90 295 C95 240 180 230 230 220 C270 210 320 160 375 160 C410 160 435 185 440 225 C450 260 450 275 445 285 C370 295 200 300 90 295 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Suede Mudguard (Toe) -->
+    <path d="M90 295 C95 255 140 245 180 250 C160 280 130 295 90 295 Z" fill="#e2e8f0"/>
+    <!-- Forest Green Leather Swoop / Stripe -->
+    <path d="M200 255 C240 240 300 240 380 210 C390 225 370 245 320 265 C260 285 220 280 200 255 Z" fill="#0f766e"/>
+    <!-- Heel Tab -->
+    <path d="M410 170 C425 175 438 190 440 215 L415 210 Z" fill="#0f766e"/>
+    <!-- Classic Eyelets & Cotton Laces -->
+    <circle cx="260" cy="225" r="4.5" fill="#94a3b8"/>
+    <circle cx="295" cy="210" r="4.5" fill="#94a3b8"/>
+    <circle cx="330" cy="195" r="4.5" fill="#94a3b8"/>
+    <circle cx="365" cy="180" r="4.5" fill="#94a3b8"/>
+    <path d="M255 225 L290 210 M290 210 L325 195 M325 195 L360 180" stroke="#f1f5f9" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+</svg>

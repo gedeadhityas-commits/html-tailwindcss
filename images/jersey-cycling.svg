@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCyc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="100%" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <linearGradient id="cycBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <filter id="shadowCyc" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#075985" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgCyc)" rx="24"/>
+  <ellipse cx="300" cy="390" rx="190" ry="20" fill="#075985" opacity="0.14"/>
+  <g filter="url(#shadowCyc)" transform="translate(60, 25)">
+    <!-- Aerodynamic Cycling Fit -->
+    <path d="M195 70 C220 80 260 80 285 70 L370 110 L345 160 L320 148 L315 355 L165 355 L160 148 L135 160 L110 110 Z" fill="url(#cycBody)"/>
+    <!-- Mandarin Stand-up Collar -->
+    <path d="M195 70 C220 78 260 78 285 70 L285 60 C260 52 220 52 195 60 Z" fill="#0c4a6e"/>
+    <!-- Full-Length Center Zipper -->
+    <line x1="240" y1="60" x2="240" y2="355" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="237" y="75" width="6" height="12" rx="2" fill="#ffffff"/>
+    <!-- Hi-Vis Fluorescent Yellow Stripes -->
+    <path d="M160 148 L135 160 L130 150 L155 140 Z" fill="#eab308"/>
+    <path d="M320 148 L345 160 L350 150 L325 140 Z" fill="#eab308"/>
+    <!-- Chest Reflective Graphics -->
+    <rect x="180" y="160" width="50" height="6" rx="2" fill="#ffffff"/>
+    <text x="205" y="152" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle" letter-spacing="1">VELO</text>
+    <!-- Rear Triple Pocket Simulation (Silhouetted lower accent) -->
+    <path d="M165 290 L315 290 L315 355 L165 355 Z" fill="#0c4a6e" opacity="0.3"/>
+    <line x1="215" y1="290" x2="215" y2="355" stroke="#38bdf8" stroke-width="2"/>
+    <line x1="265" y1="290" x2="265" y2="355" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="175" y="340" width="130" height="4" rx="2" fill="#eab308"/>
+  </g>
+</svg>

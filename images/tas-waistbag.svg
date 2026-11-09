@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgWaist" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="bodyWaist" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#27272a"/>
+    </linearGradient>
+    <filter id="shadowWaist" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgWaist)" rx="24"/>
+  <ellipse cx="300" cy="370" rx="210" ry="20" fill="#0f172a" opacity="0.16"/>
+  <g filter="url(#shadowWaist)" transform="translate(50, 40)">
+    <!-- Waist Belt Straps & Buckle -->
+    <path d="M40 220 L120 220 M380 220 L460 220" stroke="#3f3f46" stroke-width="24" stroke-linecap="round"/>
+    <rect x="420" y="206" width="30" height="28" rx="6" fill="#0f766e"/>
+    <!-- Aerodynamic Stealth Body -->
+    <path d="M90 220 C100 170 200 150 250 150 C300 150 400 170 410 220 C405 270 330 290 250 290 C170 290 95 270 90 220 Z" fill="url(#bodyWaist)"/>
+    <!-- Top Arc Main Zipper -->
+    <path d="M130 190 Q250 170 370 190" stroke="#0f766e" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Front Compartment Shell -->
+    <path d="M120 220 C140 210 210 205 250 205 C290 205 360 210 380 220 C375 260 320 275 250 275 C180 275 125 260 120 220 Z" fill="#18181b" stroke="#3f3f46" stroke-width="1.5"/>
+    <line x1="160" y1="235" x2="340" y2="235" stroke="#10b981" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Reflector Tag -->
+    <rect x="235" y="250" width="30" height="8" rx="2" fill="#34d399"/>
+  </g>
+</svg>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Tas Ransel Urban | Toko Urban</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Compiled Tailwind CSS v4.3 Output -->
+    <link rel="stylesheet" href="dist/output.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('igas_theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Komponen Header dan Navbar -->
+    <header class="main-header sticky top-0 z-40 bg-white/92 backdrop-blur-md border-b border-gray-200 transition-all duration-300 dark:bg-zinc-950/92 dark:border-zinc-800" id="mainHeader">
+        <div class="header-container max-w-[1120px] h-[68px] mx-auto px-5 flex items-center justify-between gap-4">
+            <a href="index.html" class="brand-name inline-flex items-center gap-1.5 text-lg font-black tracking-wide text-zinc-900 shrink-0 no-underline dark:text-zinc-100">
+                <span class="brand-accent bg-zinc-900 text-white text-xs font-bold px-2 py-0.5 rounded tracking-widest dark:bg-zinc-100 dark:text-zinc-950">IGAS</span> STORE
+            </a>
+            <nav class="navbar max-lg:absolute max-lg:top-[68px] max-lg:left-0 max-lg:right-0 max-lg:bg-white/95 max-lg:backdrop-blur-xl max-lg:border-b max-lg:border-gray-200 max-lg:p-4 max-lg:shadow-xl max-lg:opacity-0 max-lg:invisible max-lg:-translate-y-2 max-lg:transition-all max-lg:duration-300 [&.active]:max-lg:opacity-100 [&.active]:max-lg:visible [&.active]:max-lg:translate-y-0 lg:flex lg:items-center lg:bg-gray-100/90 lg:border lg:border-gray-200 lg:p-1 lg:rounded-full dark:max-lg:bg-zinc-950/95 dark:max-lg:border-zinc-800 dark:lg:bg-zinc-900 dark:lg:border-zinc-800" id="mainNavbar">
+                <ul class="nav-menu flex max-lg:flex-col items-center gap-1 list-none m-0 p-0 max-lg:w-full">
+                    <li><a href="index.html#home" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800">Home</a></li>
+                    <li><a href="index.html#produk" class="nav-link active inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Produk</a></li>
+                    <li><a href="index.html#mix-match" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800">Mix &amp; Match</a></li>
+                    <li><a href="index.html#cara-belanja" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800">Cara Belanja</a></li>
+                    <li><a href="index.html#tentang" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800">Tentang</a></li>
+                    <li><a href="index.html#faq" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800">FAQ</a></li>
+                    <li><a href="index.html#kontak" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions-group flex items-center gap-2 shrink-0">
+                <button type="button" class="theme-toggle-btn inline-flex items-center justify-center gap-1.5 h-9 px-3 rounded-full border border-gray-200 bg-gray-50 text-xs font-semibold text-zinc-800 hover:bg-gray-100 transition-colors cursor-pointer dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800" id="themeToggleBtn" aria-label="Ganti Mode Gelap atau Terang" title="Ganti Tema Mode Gelap / Terang">
+                    <svg class="theme-toggle-icon" id="themeToggleIcon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span id="themeToggleText">Mode Gelap</span>
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20tanya%20produk" target="_blank" rel="noopener noreferrer" class="header-cta-btn inline-flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Chat Admin</span>
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button type="button" class="mobile-menu-toggle lg:hidden flex flex-col justify-center items-center gap-1 w-9 h-9 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800" id="mobileMenuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <span class="hamburger-bar w-4 h-0.5 bg-zinc-900 dark:bg-white rounded transition-transform"></span>
+                    <span class="hamburger-bar w-4 h-0.5 bg-zinc-900 dark:bg-white rounded transition-opacity"></span>
+                    <span class="hamburger-bar w-4 h-0.5 bg-zinc-900 dark:bg-white rounded transition-transform"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <!-- Tautan Navigasi Kembali -->
+        <nav class="breadcrumb-nav">
+            <a href="index.html" class="back-link">&larr; Kembali ke Katalog</a>
+        </nav>
+
+        <!-- Kotak Detail Produk (CSS Grid) -->
+        <article class="product-detail-card">
+            <!-- Kolom Kiri: Gambar Produk -->
+            <div class="detail-image-column">
+                <img id="detailMainImgTas" src="images/tas-ransel.jpg" alt="Foto Tas Ransel Urban hitam minimalis" class="detail-product-image" width="640" height="480">
+                <div class="detail-thumbnails-row">
+                    <button type="button" class="detail-thumb-btn active" data-src="images/tas-ransel.jpg">
+                        <img src="images/tas-ransel.jpg" alt="Angle Utama">
+                        <span>Angle Utama</span>
+                    </button>
+                    <button type="button" class="detail-thumb-btn" data-src="images/tas-ransel-side.jpg">
+                        <img src="images/tas-ransel-side.jpg" alt="Angle Samping">
+                        <span>Tampak Samping</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Informasi & Pembelian Produk -->
+            <div class="detail-info-column">
+                <p class="detail-category">TAS & AKSESORIS</p>
+                <h1 class="detail-title">Tas Ransel Urban</h1>
+                <p class="detail-price">Rp349.000</p>
+                <p class="detail-description">
+                    Tas ransel multifungsi modern yang siap menemani mobilitas harian Anda. Dilengkapi kompartemen laptop berbusa tebal, saku multifungsi, dan material tahan percikan air untuk melindungi barang berharga Anda dengan aman dan stylish.
+                </p>
+
+                <!-- Daftar Keunggulan Produk -->
+                <div class="features-block">
+                    <h2 class="features-heading">Keunggulan Produk:</h2>
+                    <ul class="product-features">
+                        <li>Kompartemen laptop khusus hingga ukuran 15.6 inci</li>
+                        <li>Bahan kanvas water-repellent tahan percikan air</li>
+                        <li>Tali bahu ergonomis empuk bersirkulasi udara</li>
+                    </ul>
+                </div>
+
+                <!-- Pilihan Warna Tas (Flexbox) -->
+                <div class="size-section">
+                    <p class="size-title">Pilih Warna:</p>
+                    <div class="size-options color-options">
+                        <button type="button" class="color-btn active" data-color="Hitam Urban">Hitam Urban</button>
+                        <button type="button" class="color-btn" data-color="Hijau Army">Hijau Army</button>
+                        <button type="button" class="color-btn" data-color="Abu-abu Minimalis">Abu-abu</button>
+                    </div>
+                </div>
+
+                <!-- Tombol Utama Beli Sekarang via WhatsApp -->
+                <button type="button" class="buy-now-btn" id="btn-buy-tas">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Beli Sekarang via WhatsApp</span>
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Komponen Footer -->
+    <footer class="site-footer mt-16 py-12 border-t border-gray-200 bg-white dark:bg-zinc-950 dark:border-zinc-800">
+        <div class="footer-container max-w-[1120px] mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <p class="footer-brand text-xs text-gray-500 m-0 dark:text-zinc-400"><strong class="font-bold text-zinc-900 dark:text-zinc-100">TOKO URBAN</strong> — Teman nyaman untuk langkah sehari-hari.</p>
+            <nav class="footer-nav">
+                <ul class="footer-links flex items-center gap-5 list-none m-0 p-0 text-xs font-semibold text-gray-600 dark:text-zinc-400">
+                    <li><a href="index.html#tentang" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Tentang Kami</a></li>
+                    <li><a href="index.html#cara-belanja" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Cara Belanja</a></li>
+                    <li><a href="index.html#faq" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">FAQ</a></li>
+                    <li><a href="index.html#kontak" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Kontak</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copyright text-xs text-gray-400 m-0 dark:text-zinc-500">&copy; 2026 Toko Urban. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Hubungi WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Multi-Angle Photo Switcher
+        const detailMainImgTas = document.getElementById('detailMainImgTas');
+        const detailThumbBtnsTas = document.querySelectorAll('.detail-thumb-btn');
+        detailThumbBtnsTas.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const newSrc = btn.getAttribute('data-src');
+                if (newSrc && detailMainImgTas) {
+                    detailMainImgTas.style.opacity = '0.3';
+                    setTimeout(() => {
+                        detailMainImgTas.src = newSrc;
+                        detailMainImgTas.style.opacity = '1';
+                    }, 120);
+
+                    detailThumbBtnsTas.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                }
+            });
+        });
+
+        // Pilihan warna tas
+        let selectedColor = 'Hitam Urban';
+        const colorButtons = document.querySelectorAll('.color-btn');
+        colorButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                colorButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedColor = btn.getAttribute('data-color');
+            });
+        });
+
+        // Beli sekarang via WhatsApp
+        document.getElementById('btn-buy-tas').addEventListener('click', () => {
+            const message = encodeURIComponent(`Halo Toko Urban, saya tertarik membeli Tas Ransel Urban (Pilihan Warna: ${selectedColor}). Apakah stok masih tersedia?`);
+            window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+        });
+
+        // Dark Mode Toggle & Mobile Menu di Halaman Detail Tas
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeToggleIcon = document.getElementById('themeToggleIcon');
+        const themeToggleText = document.getElementById('themeToggleText');
+
+        const MOON_SVG_PATH = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        const SUN_SVG_PATH = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+
+        const syncThemeUI = (theme) => {
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                if (themeToggleIcon) themeToggleIcon.innerHTML = SUN_SVG_PATH;
+                if (themeToggleText) themeToggleText.textContent = 'Mode Terang';
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                if (themeToggleIcon) themeToggleIcon.innerHTML = MOON_SVG_PATH;
+                if (themeToggleText) themeToggleText.textContent = 'Mode Gelap';
+            }
+        };
+
+        syncThemeUI(localStorage.getItem('igas_theme') || 'light');
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('igas_theme', nextTheme);
+                syncThemeUI(nextTheme);
+            });
+        }
+
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNavbar = document.getElementById('mainNavbar');
+        if (mobileMenuToggle && mainNavbar) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isOpen = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+                mobileMenuToggle.classList.toggle('active');
+                mainNavbar.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>
+

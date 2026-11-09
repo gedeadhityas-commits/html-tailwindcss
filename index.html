@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGAS STORE — Toko Urban | Kenyamanan Nyata untuk Langkahmu</title>
+    <meta name="description" content="Toko online resmi IGAS STORE (Toko Urban). Dapatkan koleksi sepatu kasual ringan, tas ransel komuter, baju jersey, dan t-shirt berkualitas tinggi dengan penawaran spesial.">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Compiled Tailwind CSS v4.3 Output -->
+    <link rel="stylesheet" href="dist/output.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('igas_theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Toast Notification Container -->
+    <div id="toastNotification" class="toast-notification fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 bg-white border border-gray-200 rounded-2xl shadow-xl dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-100 max-w-sm pointer-events-auto" role="alert" aria-live="polite">
+        <div class="toast-icon flex items-center justify-center w-8 h-8 rounded-full bg-zinc-900 text-white font-bold text-sm shrink-0 dark:bg-white dark:text-zinc-900">✓</div>
+        <div class="toast-message flex flex-col gap-0.5">
+            <strong class="toast-title font-bold text-sm text-zinc-900 dark:text-zinc-100" id="toastTitle">Pesan Terkirim!</strong>
+            <p class="toast-desc text-xs text-gray-500 m-0 leading-relaxed dark:text-zinc-400" id="toastDesc">Terima kasih, tim IGAS STORE akan segera menghubungi Anda kembali.</p>
+        </div>
+    </div>
+
+    <!-- Header & Navbar Sticky Minimalis -->
+    <header class="main-header sticky top-0 z-40 bg-white/92 backdrop-blur-md border-b border-gray-200 transition-all duration-300 dark:bg-zinc-950/92 dark:border-zinc-800" id="mainHeader">
+        <div class="header-container max-w-[1120px] h-[68px] mx-auto px-5 flex items-center justify-between gap-4">
+            <a href="#home" class="brand-name inline-flex items-center gap-1.5 text-lg font-black tracking-wide text-zinc-900 shrink-0 no-underline dark:text-zinc-100">
+                <span class="brand-accent bg-zinc-900 text-white text-xs font-bold px-2 py-0.5 rounded tracking-widest dark:bg-zinc-100 dark:text-zinc-950">IGAS</span> STORE
+            </a>
+
+            <!-- Menu Navigasi (Scrollspy Aktif) -->
+            <nav class="navbar max-lg:absolute max-lg:top-[68px] max-lg:left-0 max-lg:right-0 max-lg:bg-white/95 max-lg:backdrop-blur-xl max-lg:border-b max-lg:border-gray-200 max-lg:p-4 max-lg:shadow-xl max-lg:opacity-0 max-lg:invisible max-lg:-translate-y-2 max-lg:transition-all max-lg:duration-300 [&.active]:max-lg:opacity-100 [&.active]:max-lg:visible [&.active]:max-lg:translate-y-0 lg:flex lg:items-center lg:bg-gray-100/90 lg:border lg:border-gray-200 lg:p-1 lg:rounded-full dark:max-lg:bg-zinc-950/95 dark:max-lg:border-zinc-800 dark:lg:bg-zinc-900 dark:lg:border-zinc-800" id="mainNavbar">
+                <ul class="nav-menu flex max-lg:flex-col items-center gap-1 list-none m-0 p-0 max-lg:w-full">
+                    <li><a href="#home" class="nav-link active inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Home</a></li>
+                    <li><a href="#produk" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Produk</a></li>
+                    <li><a href="#mix-match" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Mix &amp; Match</a></li>
+                    <li><a href="#cara-belanja" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Cara Belanja</a></li>
+                    <li><a href="#tentang" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Tentang</a></li>
+                    <li><a href="#faq" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">FAQ</a></li>
+                    <li><a href="#kontak" class="nav-link inline-block max-lg:w-full max-lg:text-left px-3.5 py-1.5 text-xs font-semibold text-gray-600 rounded-full transition-all duration-200 hover:text-zinc-900 hover:bg-gray-200/60 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950">Kontak</a></li>
+                </ul>
+            </nav>
+
+            <!-- Quick Action: Mode Tema, WhatsApp & Mobile Menu -->
+            <div class="header-actions-group flex items-center gap-2 shrink-0">
+                <button type="button" class="theme-toggle-btn inline-flex items-center justify-center gap-1.5 h-9 px-3 rounded-full border border-gray-200 bg-gray-50 text-xs font-semibold text-zinc-800 hover:bg-gray-100 transition-colors cursor-pointer dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:bg-zinc-800" id="themeToggleBtn" aria-label="Ganti Mode Gelap atau Terang" title="Ganti Tema Mode Gelap / Terang">
+                    <svg class="theme-toggle-icon" id="themeToggleIcon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span id="themeToggleText">Mode Gelap</span>
+                </button>
+                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20tanya%20produk" target="_blank" rel="noopener noreferrer" class="header-cta-btn inline-flex items-center gap-1.5 h-9 px-3.5 rounded-full bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Chat Admin</span>
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button type="button" class="mobile-menu-toggle lg:hidden flex flex-col justify-center items-center gap-1 w-9 h-9 rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800" id="mobileMenuToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                    <span class="hamburger-bar w-4 h-0.5 bg-zinc-900 dark:bg-white rounded transition-transform"></span>
+                    <span class="hamburger-bar w-4 h-0.5 bg-zinc-900 dark:bg-white rounded transition-opacity"></span>
+                    <span class="hamburger-bar w-4 h-0.5 bg-zinc-900 dark:bg-white rounded transition-transform"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page w-full max-w-[1120px] mx-auto px-5 pt-8 pb-14">
+        <!-- Hero Banner: Split Layout Modern & Persuasif -->
+        <section class="hero-banner relative overflow-hidden rounded-3xl bg-linear-to-br from-white via-gray-50 to-gray-100 border border-gray-200/80 p-6 md:p-12 mb-10 shadow-sm dark:from-zinc-900/90 dark:via-zinc-900 dark:to-zinc-950 dark:border-zinc-800" id="home">
+            <div class="hero-split-grid grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Kolom Kiri: Copywriting & CTA -->
+                <div class="hero-text-col lg:col-span-7 flex flex-col gap-5 reveal-on-scroll">
+                    <div class="hero-badge-pill inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-zinc-900 text-white text-[11px] font-bold tracking-wider dark:bg-white dark:text-zinc-950">
+                        <span class="pulse-dot w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>KOLEKSI TERBARU • DISKON HINGGA 25%</span>
+                    </div>
+
+                    <h1 class="hero-title text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-900 tracking-tight leading-[1.15] m-0 dark:text-zinc-100">Kenyamanan Nyata untuk Langkah & Mobilitas Harianmu</h1>
+                    <p class="hero-description text-sm sm:text-base text-gray-600 leading-relaxed m-0 dark:text-zinc-400">
+                        Dapatkan koleksi sepatu kasual performa tinggi, tas komuter tahan air, baju jersey olahraga, hingga t-shirt streetwear berstandar premium. Dirancang khusus untuk menemani gaya hidup aktif Anda setiap hari.
+                    </p>
+
+                    <div class="hero-cta-group flex flex-wrap items-center gap-3.5 pt-2">
+                        <a href="#produk" class="hero-btn primary-btn shimmer-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-zinc-900 text-white font-bold text-sm hover:bg-zinc-800 transition-all shadow-md hover:shadow-lg dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200">
+                            <span>Jelajahi Produk Pilihan</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </a>
+                        <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20konsultasi%20ukuran" target="_blank" rel="noopener noreferrer" class="hero-btn secondary-btn inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white border border-gray-200 text-zinc-900 font-semibold text-sm hover:bg-gray-50 transition-all dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-800">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                            <span>Konsultasi Ukuran</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Proof / Statistik Kepercayaan -->
+                    <div class="hero-stats-row flex items-center gap-6 pt-4 border-t border-gray-200/60 dark:border-zinc-800/80">
+                        <div class="hero-stat-item">
+                            <span class="stat-number block text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-100">5.000+</span>
+                            <span class="stat-label block text-xs text-gray-500 font-medium dark:text-zinc-400">Produk Terjual</span>
+                        </div>
+                        <div class="stat-divider w-px h-8 bg-gray-200 dark:bg-zinc-800"></div>
+                        <div class="hero-stat-item">
+                            <span class="stat-number block text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-100">4.9 / 5.0</span>
+                            <span class="stat-label block text-xs text-gray-500 font-medium dark:text-zinc-400">Rating Pembeli</span>
+                        </div>
+                        <div class="stat-divider w-px h-8 bg-gray-200 dark:bg-zinc-800"></div>
+                        <div class="hero-stat-item">
+                            <span class="stat-number block text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-100">100%</span>
+                            <span class="stat-label block text-xs text-gray-500 font-medium dark:text-zinc-400">Jaminan Original</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Interactive Visual Showcase Floating Card -->
+                <div class="hero-visual-col lg:col-span-5 reveal-on-scroll">
+                    <div class="hero-featured-card relative bg-white border border-gray-200 rounded-3xl p-5 shadow-lg dark:bg-zinc-900 dark:border-zinc-800">
+                        <div class="hero-card-glow"></div>
+                        <div class="hero-floating-tag absolute top-4 left-4 z-10 px-3 py-1 bg-amber-500 text-white text-[11px] font-black rounded-full tracking-wider shadow-sm">BEST SELLER</div>
+                        <div class="hero-price-tag absolute top-4 right-4 z-10 px-3 py-1 bg-zinc-900/80 backdrop-blur-md text-white text-xs font-bold rounded-full dark:bg-zinc-100/90 dark:text-zinc-950">Rp 1.799.000</div>
+                        <div class="hero-img-wrap aspect-4/3 rounded-2xl overflow-hidden bg-gray-100 dark:bg-zinc-800 flex items-center justify-center">
+                            <img id="heroShowcaseImg" src="images/sepatu-urban-hd.jpg" alt="Foto Sepatu Urban Flagship" class="hero-product-img w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <!-- Mini Multi-Angle Switcher di Hero -->
+                        <div class="hero-angle-selector flex items-center justify-center gap-2 mt-4 pt-3 border-t border-gray-100 dark:border-zinc-800/80">
+                            <span class="hero-selector-title text-xs font-semibold text-gray-500 dark:text-zinc-400">Pilih Sudut:</span>
+                            <button type="button" class="hero-angle-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950 active" data-src="images/sepatu-urban-hd.jpg">Angle Utama</button>
+                            <button type="button" class="hero-angle-btn text-xs font-semibold px-3 py-1.5 rounded-lg border border-gray-200 bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors cursor-pointer dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700 [&.active]:bg-zinc-900 [&.active]:text-white dark:[&.active]:bg-zinc-100 dark:[&.active]:text-zinc-950" data-src="images/sepatu-urban-side.jpg">Tampak Samping</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar: 4 Pilar Keunggulan Belanja -->
+        <section class="trust-bar grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14 reveal-on-scroll">
+            <div class="trust-item flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                <div class="trust-icon-box flex items-center justify-center w-11 h-11 rounded-xl bg-gray-100 text-zinc-900 shrink-0 dark:bg-zinc-800 dark:text-zinc-100">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                </div>
+                <div class="trust-content">
+                    <h4 class="trust-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Pengiriman Cepat & COD</h4>
+                    <p class="trust-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Kirim ke seluruh Indonesia dengan nomor resi terverifikasi.</p>
+                </div>
+            </div>
+
+            <div class="trust-item flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                <div class="trust-icon-box flex items-center justify-center w-11 h-11 rounded-xl bg-gray-100 text-zinc-900 shrink-0 dark:bg-zinc-800 dark:text-zinc-100">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <polyline points="1 20 1 14 7 14"></polyline>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                </div>
+                <div class="trust-content">
+                    <h4 class="trust-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Garansi Tukar 7 Hari</h4>
+                    <p class="trust-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Bebas khawatir salah ukuran, tukar size mudah & cepat.</p>
+                </div>
+            </div>
+
+            <div class="trust-item flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                <div class="trust-icon-box flex items-center justify-center w-11 h-11 rounded-xl bg-gray-100 text-zinc-900 shrink-0 dark:bg-zinc-800 dark:text-zinc-100">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <div class="trust-content">
+                    <h4 class="trust-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">100% Produk Original</h4>
+                    <p class="trust-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Material premium pilihan dengan foto produk studio asli.</p>
+                </div>
+            </div>
+
+            <div class="trust-item flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                <div class="trust-icon-box flex items-center justify-center w-11 h-11 rounded-xl bg-gray-100 text-zinc-900 shrink-0 dark:bg-zinc-800 dark:text-zinc-100">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <div class="trust-content">
+                    <h4 class="trust-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Layanan CS 7 Hari</h4>
+                    <p class="trust-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Konsultasi ukuran & pemesanan instan setiap hari.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wadah Katalog Produk -->
+        <section class="catalog-section mb-16" id="produk">
+            <div class="catalog-header-wrap mb-8 reveal-on-scroll">
+                <div class="catalog-title-group mb-6">
+                    <p class="section-eyebrow text-xs font-bold tracking-widest text-zinc-500 uppercase m-0 dark:text-zinc-400">KATALOG STUDIO HD</p>
+                    <h2 class="catalog-title text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight m-0 mt-1 dark:text-zinc-100">Koleksi Produk Pilihan</h2>
+                    <p class="catalog-subtitle text-sm text-gray-600 m-0 mt-1 max-w-2xl dark:text-zinc-400">Fotografi studio minimalis berkualitas tinggi—tampilan produk 100% konsisten saat Anda mengeklik View Detail.</p>
+                </div>
+
+                <!-- FITUR 4: Panduan Aktivitas "Cari Produk Sesuai Aktivitasmu" (Interactive Activity Finder) -->
+                <div class="activity-finder-box my-6 p-5 sm:p-6 rounded-2xl bg-white border border-gray-200/90 shadow-sm dark:bg-zinc-900 dark:border-zinc-800" id="activityFinder">
+                    <div class="activity-finder-header flex flex-col gap-2 mb-4">
+                        <div class="activity-finder-title-wrap">
+                            <span class="activity-finder-badge inline-flex self-start px-2.5 py-1 rounded-full bg-zinc-900 text-white text-[10px] font-bold tracking-widest dark:bg-zinc-100 dark:text-zinc-950">FILTER AKTIVITAS</span>
+                            <h3 class="activity-finder-title text-base sm:text-lg font-bold text-zinc-900 m-0 mt-1 dark:text-zinc-100">Cari Produk Sesuai Aktivitasmu Hari Ini</h3>
+                        </div>
+                        <p class="activity-finder-hint text-xs text-gray-500 m-0 dark:text-zinc-400">Pilih gaya aktivitas Anda untuk menyaring rekomendasi Sepatu, Tas &amp; Apparel terbaik:</p>
+                    </div>
+                    <div class="activity-pills-row flex flex-wrap gap-2" role="group" aria-label="Filter Berdasarkan Aktivitas">
+                        <button type="button" class="activity-pill-btn active" data-activity="all">Semua Aktivitas (22)</button>
+                        <button type="button" class="activity-pill-btn" data-activity="sport">Lari, Gym &amp; Olahraga</button>
+                        <button type="button" class="activity-pill-btn" data-activity="commute">Ngantor, Kuliah &amp; Komuter</button>
+                        <button type="button" class="activity-pill-btn" data-activity="streetwear">Nongkrong &amp; Streetwear</button>
+                        <button type="button" class="activity-pill-btn" data-activity="outdoor">Riding, Touring &amp; Traveling</button>
+                    </div>
+                    <div class="activity-recommendation-banner flex flex-wrap items-center justify-between gap-3 mt-4 p-3.5 rounded-xl bg-gray-50 border border-gray-200 text-xs font-medium text-gray-600 dark:bg-zinc-800/60 dark:border-zinc-700/60 dark:text-zinc-300" id="activityRecBanner">
+                        <span id="activityRecText">Menampilkan produk pilihan untuk aktivitas Anda.</span>
+                        <a href="#mix-match" class="detail-button inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 whitespace-nowrap" id="activityToBuilderBtn">Rakit Setelan Ini (Diskon 10%) &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Kontrol Tampilan: Filter Kategori & Pengalih Layout -->
+                <div class="catalog-controls flex flex-wrap items-center justify-between gap-4 mt-8 pb-4 border-b border-gray-200 dark:border-zinc-800">
+                    <!-- Filter Kategori -->
+                    <div class="category-tabs flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter Produk">
+                        <button type="button" class="tab-btn active" data-filter="all">Semua Produk (22)</button>
+                        <button type="button" class="tab-btn" data-filter="sepatu">Sepatu (6)</button>
+                        <button type="button" class="tab-btn" data-filter="tas">Tas (6)</button>
+                        <button type="button" class="tab-btn" data-filter="jersey">Baju Jersey (5)</button>
+                        <button type="button" class="tab-btn" data-filter="tshirt">T-Shirt (5)</button>
+                    </div>
+
+                    <!-- Layout Switcher (Pengalih Mode Layout) -->
+                    <div class="layout-switcher flex items-center gap-1.5 p-1 rounded-xl bg-gray-100 border border-gray-200 dark:bg-zinc-800 dark:border-zinc-700" aria-label="Pilih Mode Layout">
+                        <span class="switcher-label text-xs font-semibold text-gray-500 px-2 dark:text-zinc-400">Layout:</span>
+                        <button type="button" class="layout-btn active" data-layout="grid" title="Layout Grid Modern">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                                <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                                <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                                <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                            </svg>
+                            <span>Grid</span>
+                        </button>
+                        <button type="button" class="layout-btn" data-layout="showcase" title="Layout Showcase / Split Hero">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                <rect x="3" y="4" width="18" height="7" rx="1.5"></rect>
+                                <rect x="3" y="13" width="18" height="7" rx="1.5"></rect>
+                            </svg>
+                            <span>Showcase</span>
+                        </button>
+                        <button type="button" class="layout-btn" data-layout="list" title="Layout List / Baris Kompak">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                <rect x="3" y="4" width="5" height="4" rx="1"></rect>
+                                <rect x="10" y="4" width="11" height="4" rx="1"></rect>
+                                <rect x="3" y="10" width="5" height="4" rx="1"></rect>
+                                <rect x="10" y="10" width="11" height="4" rx="1"></rect>
+                                <rect x="3" y="16" width="5" height="4" rx="1"></rect>
+                                <rect x="10" y="16" width="11" height="4" rx="1"></rect>
+                            </svg>
+                            <span>List</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid layout-grid" id="productGridContainer">
+                <!-- ==================== 6 KOLEKSI SEPATU STUDIO HD ==================== -->
+                <!-- Sepatu 1: Sepatu Urban -->
+                <article class="product-card reveal-on-scroll" data-category="sepatu">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">BEST SELLER</span>
+                            <span class="badge-pill badge-discount">HEMAT 10%</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" id="mainImgSepatu" src="images/sepatu-urban-hd.jpg"
+                                alt="Foto Studio HD Sepatu Urban" width="640" height="480">
+                        </div>
+                        <div class="product-thumbnails">
+                            <button type="button" class="thumb-btn active" data-target="mainImgSepatu" data-src="images/sepatu-urban-hd.jpg" title="Tampak Depan 3/4">
+                                <img src="images/sepatu-urban-hd.jpg" alt="Thumbnail Tampak Utama">
+                                <span>Angle Utama</span>
+                            </button>
+                            <button type="button" class="thumb-btn" data-target="mainImgSepatu" data-src="images/sepatu-urban-side.jpg" title="Tampak Samping Profil">
+                                <img src="images/sepatu-urban-side.jpg" alt="Thumbnail Tampak Samping">
+                                <span>Angle Samping</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Sepatu Kasual Pria & Wanita</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (128)</span>
+                            </div>
+                        </div>
+
+                        <h3 class="product-name">Sepatu Urban</h3>
+                        <p class="product-description">Sepatu kasual ringan dan fleksibel dengan bantalan empuk dan grip karet antiselip untuk mobilitas perkotaan aktif.</p>
+
+                        <div class="product-highlights">
+                            <span class="spec-tag">Bahan Kanvas Ringan</span>
+                            <span class="spec-tag">Sol Karet Antiselip</span>
+                            <span class="spec-tag">Size 39-42</span>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 1.999.000</span>
+                                <p class="product-price">Rp 1.799.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Sepatu%20Urban%20Rp1.799.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=sepatu-urban" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sepatu 2: AeroGlide Running Pro -->
+                <article class="product-card reveal-on-scroll" data-category="sepatu">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">BEST SELLER</span>
+                            <span class="badge-pill badge-feature">PRO RUN</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/sepatu-running.jpg" alt="Foto Studio HD AeroGlide Running Pro" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Sepatu Running & Training</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (112)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">AeroGlide Running Pro</h3>
+                        <p class="product-description">Sepatu lari ultralight dengan bantalan responsive cushion, sirkulasi udara optimal, dan grip traksi jalan raya tahan licin.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Ultralight Mesh</span>
+                            <span class="spec-tag">Rebound Cushion</span>
+                            <span class="spec-tag">Size 39-44</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 589.000</span>
+                                <p class="product-price">Rp 459.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20AeroGlide%20Running%20Pro%20Rp459.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=sepatu-running" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sepatu 3: Retro Classic Low Sneaker -->
+                <article class="product-card reveal-on-scroll" data-category="sepatu">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-discount">HEMAT 22%</span>
+                            <span class="badge-pill badge-feature">VINTAGE</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/sepatu-retro.jpg" alt="Foto Studio HD Retro Classic Sneaker" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Sneaker Kasual Retro</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (89)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Retro Classic Sneaker</h3>
+                        <p class="product-description">Siluet vintage 80-an berbalut kulit sintetis premium putih bersih dengan sol gum karet klasik yang timeless dan awet.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Genuine Synth Leather</span>
+                            <span class="spec-tag">Gum Sole Klasik</span>
+                            <span class="spec-tag">Size 39-43</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 499.000</span>
+                                <p class="product-price">Rp 389.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Retro%20Classic%20Sneaker%20Rp389.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=sepatu-retro" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sepatu 4: EasyWalk Slip-On Knit -->
+                <article class="product-card reveal-on-scroll" data-category="sepatu">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">PRAKTIS</span>
+                            <span class="badge-pill badge-feature">BREATHABLE</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/sepatu-slipon.jpg" alt="Foto Studio HD EasyWalk Slip-On Knit" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Slip-On Santai & Kerja</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.7 (76)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">EasyWalk Slip-On Knit</h3>
+                        <p class="product-description">Sepatu slip-on tanpa tali dengan rajutan knit fleksibel dan sirkulasi udara bebas gerah untuk komuter aktif harian.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Desain Tanpa Tali</span>
+                            <span class="spec-tag">Upper Knit Elastis</span>
+                            <span class="spec-tag">Size 38-44</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 419.000</span>
+                                <p class="product-price">Rp 329.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20EasyWalk%20Slip-On%20Knit%20Rp329.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=sepatu-slipon" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sepatu 5: High-Top Streetwear Matrix -->
+                <article class="product-card reveal-on-scroll" data-category="sepatu">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">STREET STYLE</span>
+                            <span class="badge-pill badge-feature">CHUNKY SOLE</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/sepatu-hightop.jpg" alt="Foto Studio HD High-Top Streetwear Matrix" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Sneaker High-Top Urban</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (143)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">High-Top Streetwear Matrix</h3>
+                        <p class="product-description">Sneaker berstruktur kokoh dengan sol platform tebal yang memberi perlindungan kaki serta gaya streetwear maskulin.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Ankle Protection</span>
+                            <span class="spec-tag">Sol Platform Tebal</span>
+                            <span class="spec-tag">Size 40-44</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 699.000</span>
+                                <p class="product-price">Rp 549.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20High-Top%20Streetwear%20Matrix%20Rp549.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=sepatu-hightop" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sepatu 6: Terra Adventure Sandal Hiking -->
+                <article class="product-card reveal-on-scroll" data-category="sepatu">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">OUTDOOR</span>
+                            <span class="badge-pill badge-feature">HEAVY DUTY</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/sepatu-trail.jpg" alt="Foto Studio HD Terra Adventure Sandal Hiking" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Sandal & Sepatu Trail Petualang</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (64)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Terra Adventure Sandal Hiking</h3>
+                        <p class="product-description">Alas kaki outdoor dengan konstruksi tahan gesek dan sol lug bergerigi dalam yang siap menemani hiking ringan maupun traveling.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Quick-Dry Webbing</span>
+                            <span class="spec-tag">Sol Traksi Bergerigi</span>
+                            <span class="spec-tag">Size 39-43</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 359.000</span>
+                                <p class="product-price">Rp 279.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Terra%20Adventure%20Sandal%20Rp279.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=sepatu-trail" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== 6 KOLEKSI TAS STUDIO HD ==================== -->
+                <!-- Tas 1: Tas Ransel Urban -->
+                <article class="product-card reveal-on-scroll" data-category="tas">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">WATER-REPELLENT</span>
+                            <span class="badge-pill badge-laptop">SLOT LAPTOP 15.6"</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" id="mainImgTas" src="images/tas-ransel.jpg"
+                                alt="Foto Studio HD Tas Ransel Urban" width="640" height="480">
+                        </div>
+                        <div class="product-thumbnails">
+                            <button type="button" class="thumb-btn active" data-target="mainImgTas" data-src="images/tas-ransel.jpg" title="Tampak Depan 3/4">
+                                <img src="images/tas-ransel.jpg" alt="Thumbnail Tampak Utama">
+                                <span>Angle Utama</span>
+                            </button>
+                            <button type="button" class="thumb-btn" data-target="mainImgTas" data-src="images/tas-ransel-side.jpg" title="Tampak Samping & Tali">
+                                <img src="images/tas-ransel-side.jpg" alt="Thumbnail Tampak Samping">
+                                <span>Tampak Samping</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Tas & Aksesoris Urban</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (94)</span>
+                            </div>
+                        </div>
+
+                        <h3 class="product-name">Tas Ransel Urban</h3>
+                        <p class="product-description">Tas ransel komuter ergonomis dengan slot laptop empuk berukuran hingga 15.6 inci dan material kanvas tahan percikan air.</p>
+
+                        <div class="product-highlights">
+                            <span class="spec-tag">Laptop Hingga 15.6"</span>
+                            <span class="spec-tag">Waterproof Zipper</span>
+                            <span class="spec-tag">3 Pilihan Warna</span>
+                        </div>
+
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 429.000</span>
+                                <p class="product-price">Rp 349.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Tas%20Ransel%20Urban%20Rp349.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tas-ransel" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tas 2: Sling Bag Crossbody Pro -->
+                <article class="product-card reveal-on-scroll" data-category="tas">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">BEST SELLER</span>
+                            <span class="badge-pill badge-feature">WATERPROOF</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tas-sling.jpg" alt="Foto Studio HD Sling Bag Crossbody Pro" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Tas Selempang & Crossbody</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (98)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Sling Bag Crossbody Pro</h3>
+                        <p class="product-description">Tas selempang ringkas dengan kompartemen cerdas, resleting waterproof, dan ruang penyimpanan pas untuk iPad Mini dan dompet.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Anti Percikan Air</span>
+                            <span class="spec-tag">Slot Tablet 8.3"</span>
+                            <span class="spec-tag">Bobot Ringan</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 249.000</span>
+                                <p class="product-price">Rp 189.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Sling%20Bag%20Crossbody%20Pro%20Rp189.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tas-sling" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tas 3: Duffle Gym & Travel 35L -->
+                <article class="product-card reveal-on-scroll" data-category="tas">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">35 LITER</span>
+                            <span class="badge-pill badge-feature">SLOT SEPATU</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tas-duffle.jpg" alt="Foto Studio HD Duffle Gym & Travel 35L" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Tas Gym & Weekend Travel</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (85)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Duffle Gym & Travel 35L</h3>
+                        <p class="product-description">Tas duffle berkapasitas besar dengan kantong khusus sepatu berventilasi terpisah dan tali jinjing yang diperkuat ganda.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Kapasitas 35 Liter</span>
+                            <span class="spec-tag">Kompartemen Sepatu</span>
+                            <span class="spec-tag">Bahan Oxford Tebal</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 489.000</span>
+                                <p class="product-price">Rp 379.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Duffle%20Gym%20Travel%2035L%20Rp379.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tas-duffle" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tas 4: Stealth Rider Waistbag -->
+                <article class="product-card reveal-on-scroll" data-category="tas">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">RIDER CHOICE</span>
+                            <span class="badge-pill badge-discount">HEMAT 27%</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tas-waistbag.jpg" alt="Foto Studio HD Stealth Rider Waistbag" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Tas Pinggang & Riding</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.7 (62)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Stealth Rider Waistbag</h3>
+                        <p class="product-description">Waistbag aerodinamis berbahan balistik tahan gesek dengan sabuk lebar kokoh dan garis reflektif untuk keamanan saat malam hari.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Garis Reflektif Malam</span>
+                            <span class="spec-tag">Bahan Balistik 1000D</span>
+                            <span class="spec-tag">Sabuk Quick Release</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 219.000</span>
+                                <p class="product-price">Rp 159.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Stealth%20Rider%20Waistbag%20Rp159.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tas-waistbag" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tas 5: Tote Bag Canvas Minimalist -->
+                <article class="product-card reveal-on-scroll" data-category="tas">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">KANVAS TEBAL</span>
+                            <span class="badge-pill badge-feature">RESLETING</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tas-tote.jpg" alt="Foto Studio HD Tote Bag Canvas Minimalist" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Tote Bag Casual & Kuliah</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (105)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Tote Bag Canvas Minimalist</h3>
+                        <p class="product-description">Tote bag berbahan kanvas tebal 14oz dilengkapi resleting utama anti tumpah dan saku dalam untuk laptop berukuran hingga 14 inci.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Kanvas Katun 14oz</span>
+                            <span class="spec-tag">Penutup Resleting Penuh</span>
+                            <span class="spec-tag">Slot Laptop 14"</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 229.000</span>
+                                <p class="product-price">Rp 169.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Tote%20Bag%20Canvas%20Rp169.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tas-tote" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tas 6: Executive Laptop Briefcase -->
+                <article class="product-card reveal-on-scroll" data-category="tas">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">WORK PRO</span>
+                            <span class="badge-pill badge-feature">SHOCKPROOF</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tas-briefcase.jpg" alt="Foto Studio HD Executive Laptop Briefcase" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Tas Kerja & Kantor Profesional</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (78)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Executive Laptop Briefcase</h3>
+                        <p class="product-description">Tas kerja elegan dengan busa peredam benturan tebal, kompatibel dengan laptop 15.6 inci, dan sabuk belakang untuk troli koper.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Laptop Hingga 15.6"</span>
+                            <span class="spec-tag">Busa Memory Anti Bentur</span>
+                            <span class="spec-tag">Tali Troli Koper</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 520.000</span>
+                                <p class="product-price">Rp 399.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Executive%20Briefcase%20Rp399.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tas-briefcase" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== 5 KOLEKSI BAJU JERSEY STUDIO HD ==================== -->
+                <!-- Jersey 1: Jersey Urban Active Dry-Fit -->
+                <article class="product-card reveal-on-scroll" data-category="jersey">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">BEST SELLER</span>
+                            <span class="badge-pill badge-feature">DRY-FIT PRO</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/jersey-active.jpg" alt="Foto Studio HD Jersey Urban Active Dry-Fit" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Jersey Olahraga & Gym</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (132)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Jersey Urban Active Dry-Fit</h3>
+                        <p class="product-description">Jersey performa tinggi dengan teknologi serat micro-mesh penyerap keringat kilat, adem di kulit, dan potongan atletis yang nyaman.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Micro-Mesh Dry-Fit</span>
+                            <span class="spec-tag">Anti Bakteri & Bau</span>
+                            <span class="spec-tag">Size S-XXL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 199.000</span>
+                                <p class="product-price">Rp 149.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Jersey%20Urban%20Active%20Rp149.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=jersey-active" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Jersey 2: Heritage Football Kit 90s -->
+                <article class="product-card reveal-on-scroll" data-category="jersey">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">RETRO KLASIK</span>
+                            <span class="badge-pill badge-discount">HEMAT 24%</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/jersey-heritage.jpg" alt="Foto Studio HD Heritage Football Kit 90s" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Jersey Bola Vintage</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (88)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Heritage Football Kit 90s</h3>
+                        <p class="product-description">Jersey sepak bola bergaya era keemasan 90-an dengan kerah polo bergaris, motif salur jacquard elegan, dan nomor dada ikonik.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Kerah Polo Klasik</span>
+                            <span class="spec-tag">Bahan Jacquard Motif</span>
+                            <span class="spec-tag">Size M-XXL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 249.000</span>
+                                <p class="product-price">Rp 189.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Heritage%20Football%20Kit%20Rp189.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=jersey-heritage" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Jersey 3: AeroSpeed Running Singlet -->
+                <article class="product-card reveal-on-scroll" data-category="jersey">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">ULTRALIGHT</span>
+                            <span class="badge-pill badge-feature">85 GRAM</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/jersey-running.jpg" alt="Foto Studio HD AeroSpeed Running Singlet" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Jersey Lari & Marathon</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (95)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">AeroSpeed Running Singlet</h3>
+                        <p class="product-description">Jersey lari marathon dengan ventilasi udara aktif, bobot ekstra ringan hanya 85g, dan keliman halus tanpa gesekan di kulit.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Hanya 85 Gram</span>
+                            <span class="spec-tag">Ventilasi Laser-Cut</span>
+                            <span class="spec-tag">Size S-XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 169.000</span>
+                                <p class="product-price">Rp 129.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20AeroSpeed%20Running%20Singlet%20Rp129.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=jersey-running" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Jersey 4: Streetwear Oversized Basketball Kit -->
+                <article class="product-card reveal-on-scroll" data-category="jersey">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">HOOPS URBAN</span>
+                            <span class="badge-pill badge-feature">BOXY FIT</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/jersey-street.jpg" alt="Foto Studio HD Streetwear Basketball Kit" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Jersey Sport & Streetwear</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (79)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Streetwear Basketball Kit</h3>
+                        <p class="product-description">Jersey potongan boxy longgar dengan bahan heavy mesh hitam elegan, aksen garis emas championship, dan aplikasi nomor dada.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Heavyweight Mesh</span>
+                            <span class="spec-tag">Gold Edition Trim</span>
+                            <span class="spec-tag">Size M-XXL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 269.000</span>
+                                <p class="product-price">Rp 199.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Streetwear%20Basketball%20Kit%20Rp199.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=jersey-street" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Jersey 5: Commuter Pro Cycling Jersey -->
+                <article class="product-card reveal-on-scroll" data-category="jersey">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">CYCLING PRO</span>
+                            <span class="badge-pill badge-feature">3 SAKU BELAKANG</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/jersey-cycling.jpg" alt="Foto Studio HD Commuter Pro Cycling Jersey" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Jersey Sepeda Road & Gravel</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (67)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Commuter Pro Cycling Jersey</h3>
+                        <p class="product-description">Jersey sepeda aerodinamis dengan 3 saku belakang multifungsi dan aksen garis warna neon terang untuk visibilitas gowes yang aman.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Aero Fit Lycra</span>
+                            <span class="spec-tag">3 Saku Belakang</span>
+                            <span class="spec-tag">Size S-XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 299.000</span>
+                                <p class="product-price">Rp 229.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Commuter%20Pro%20Cycling%20Jersey%20Rp229.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=jersey-cycling" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ==================== 5 KOLEKSI T-SHIRT STUDIO HD ==================== -->
+                <!-- T-Shirt 1: Heavyweight Oversized Tee 24s -->
+                <article class="product-card reveal-on-scroll" data-category="tshirt">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-hot">BEST BASIC</span>
+                            <span class="badge-pill badge-feature">DROP SHOULDER</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tshirt-oversized.jpg" alt="Foto Studio HD Heavyweight Oversized Tee 24s" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Kaos Polos Oversize</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.9 (210)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Heavyweight Oversized Tee 24s</h3>
+                        <p class="product-description">Kaos polos model drop-shoulder dengan katun combed 24s tebal, serat padat tidak menerawang, dan rib leher kencang anti melar.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">100% Cotton 24s Tebal</span>
+                            <span class="spec-tag">Pola Boxy Streetwear</span>
+                            <span class="spec-tag">Size S-XXL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 159.000</span>
+                                <p class="product-price">Rp 119.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Heavyweight%20Oversized%20Tee%20Rp119.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tshirt-oversized" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- T-Shirt 2: Vintage Tokyo Graphic Tee -->
+                <article class="product-card reveal-on-scroll" data-category="tshirt">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">JAPAN STREET</span>
+                            <span class="badge-pill badge-discount">HEMAT 26%</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tshirt-graphic.jpg" alt="Foto Studio HD Vintage Tokyo Graphic Tee" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Kaos Grafis Distro</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (115)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Vintage Tokyo Graphic Tee</h3>
+                        <p class="product-description">Kaos grafis bertema retro Tokyo street art dengan sablon plastisol raster berdetail halus di atas bahan katun combed warna broken white.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Sablon Plastisol HD</span>
+                            <span class="spec-tag">Warna Broken White</span>
+                            <span class="spec-tag">Size S-XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 189.000</span>
+                                <p class="product-price">Rp 139.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Vintage%20Tokyo%20Graphic%20Tee%20Rp139.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tshirt-graphic" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- T-Shirt 3: Minimalist Pocket Tee 30s -->
+                <article class="product-card reveal-on-scroll" data-category="tshirt">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">SUPER ADEM</span>
+                            <span class="badge-pill badge-feature">DAILY BASIC</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tshirt-pocket.jpg" alt="Foto Studio HD Minimalist Pocket Tee 30s" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Kaos Saku Dada Kasual</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-score">4.7 (94)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Minimalist Pocket Tee 30s</h3>
+                        <p class="product-description">Kaos katun combed 30s super halus dan sejuk dengan saku dada berlabel kulit sintetik, cocok untuk gaya santai maupun semi-formal luaran kemeja.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Katun Combed 30s Sejuk</span>
+                            <span class="spec-tag">Saku Dada Berlabel</span>
+                            <span class="spec-tag">Size S-XXL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 149.000</span>
+                                <p class="product-price">Rp 109.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Minimalist%20Pocket%20Tee%20Rp109.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tshirt-pocket" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- T-Shirt 4: Acid Wash Grunge Streetwear Tee -->
+                <article class="product-card reveal-on-scroll" data-category="tshirt">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">VINTAGE WASH</span>
+                            <span class="badge-pill badge-feature">LIMITED</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tshirt-acidwash.jpg" alt="Foto Studio HD Acid Wash Grunge Tee" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Kaos Washed Streetwear</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (83)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Acid Wash Grunge Tee</h3>
+                        <p class="product-description">Kaos berproses mineral washing khusus menghasilkan efek gradasi abu-abu charcoal vintage yang lembut dan berkarakter unik.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Efek Acid Wash Unik</span>
+                            <span class="spec-tag">Bahan Lembut Halus</span>
+                            <span class="spec-tag">Size M-XXL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 199.000</span>
+                                <p class="product-price">Rp 149.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Acid%20Wash%20Grunge%20Tee%20Rp149.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tshirt-acidwash" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- T-Shirt 5: Breton Stripe Nautical Tee -->
+                <article class="product-card reveal-on-scroll" data-category="tshirt">
+                    <div class="product-media-frame">
+                        <div class="badge-tag-wrap">
+                            <span class="badge-pill badge-feature">CASUAL CHIC</span>
+                            <span class="badge-pill badge-discount">HEMAT 23%</span>
+                        </div>
+                        <div class="main-image-container">
+                            <img class="product-image" src="images/tshirt-stripe.jpg" alt="Foto Studio HD Breton Stripe Nautical Tee" width="640" height="480" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-meta-header">
+                            <p class="product-category">Kaos Salur Garis Klasik</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-score">4.8 (71)</span>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Breton Stripe Nautical Tee</h3>
+                        <p class="product-description">Kaos salur garis biru-putih khas gaya maritim Parisian dari rajutan benang celup asli (yarn-dyed) yang tidak mudah pudar dicuci berulang.</p>
+                        <div class="product-highlights">
+                            <span class="spec-tag">Yarn-Dyed Asli</span>
+                            <span class="spec-tag">Anti Pudar & Kusut</span>
+                            <span class="spec-tag">Size S-XL</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-container">
+                                <span class="price-original">Rp 169.000</span>
+                                <p class="product-price">Rp 129.000</p>
+                            </div>
+                            <div class="card-btn-group">
+                                <a href="https://wa.me/6281234567890?text=Halo%20IGAS%20STORE,%20saya%20ingin%20pesan%20Breton%20Stripe%20Tee%20Rp129.000" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" title="Pesan Cepat via WA">Beli Cepat</a>
+                                <a href="detail-produk.html?id=tshirt-stripe" class="detail-button">View Detail &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FITUR 1: MIX & MATCH OUTFIT BUILDER (RAKIT SETELAN URBAN INTERAKTIF) -->
+        <section class="outfit-builder-section my-16 p-6 sm:p-10 rounded-3xl bg-linear-to-br from-white via-gray-50 to-gray-100 border border-gray-200/90 shadow-sm dark:from-zinc-900/90 dark:via-zinc-900 dark:to-zinc-950 dark:border-zinc-800 reveal-on-scroll" id="mix-match">
+            <div class="section-heading-block mb-8">
+                <p class="section-eyebrow text-xs font-bold tracking-widest text-zinc-500 uppercase m-0 dark:text-zinc-400">FITUR EKSKLUSIF • DISKON BUNDLE 10%</p>
+                <h2 class="section-main-title text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight m-0 mt-1 dark:text-zinc-100">Mix &amp; Match Outfit Builder</h2>
+                <p class="section-subtext text-sm text-gray-600 m-0 mt-1 max-w-2xl dark:text-zinc-400">Padukan 1 Atasan (Jersey/T-Shirt) + 1 Tas + 1 Sepatu sesuai gaya Anda dan nikmati potongan harga otomatis 10% untuk pembelian paket lengkap.</p>
+            </div>
+
+            <!-- Preset Gaya Cepat -->
+            <div class="outfit-presets-bar flex flex-wrap items-center gap-2 mb-8 p-3 rounded-2xl bg-white/80 border border-gray-200/80 dark:bg-zinc-800/80 dark:border-zinc-700/80">
+                <span class="preset-label text-xs font-semibold text-gray-500 mr-2 dark:text-zinc-400">Pilih Preset Gaya Cepat:</span>
+                <button type="button" class="outfit-preset-btn active" data-preset="sport">Sporty Runner</button>
+                <button type="button" class="outfit-preset-btn" data-preset="commute">Smart Commuter</button>
+                <button type="button" class="outfit-preset-btn" data-preset="streetwear">Tokyo Streetwear</button>
+                <button type="button" class="outfit-preset-btn" data-preset="outdoor">Weekend Explorer</button>
+            </div>
+
+            <!-- 3 Slot Interaktif: Atasan + Tas + Sepatu -->
+            <div class="outfit-builder-grid grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Slot 1: Atasan (Jersey / T-Shirt) -->
+                <div class="outfit-slot-card flex flex-col p-5 rounded-2xl bg-white border border-gray-200 shadow-sm dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="slot-step-header flex items-center justify-between mb-3">
+                        <span class="slot-badge inline-flex px-2.5 py-1 rounded-full bg-zinc-900 text-white text-[11px] font-bold dark:bg-zinc-100 dark:text-zinc-950">1. Pilih Atasan</span>
+                        <span class="slot-price-tag text-sm font-black text-zinc-900 dark:text-zinc-100" id="slotTopPrice">Rp 159.000</span>
+                    </div>
+                    <div class="slot-image-preview aspect-square rounded-xl overflow-hidden bg-gray-100 dark:bg-zinc-800 mb-3 flex items-center justify-center">
+                        <img id="slotTopImg" src="images/jersey-running.jpg" alt="Preview Atasan Pilihan" class="w-full h-full object-cover">
+                    </div>
+                    <label for="slotTopSelect" class="slot-select-label text-xs font-semibold text-gray-600 dark:text-zinc-400 mb-1.5">Koleksi Baju Jersey &amp; T-Shirt (10 Pilihan):</label>
+                    <select id="slotTopSelect" class="slot-dropdown w-full px-3 py-2 text-xs font-medium rounded-xl border border-gray-200 bg-gray-50 text-zinc-900 mb-3 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                        <optgroup label="Baju Jersey Olahraga">
+                            <option value="jersey-running" data-price="159000" data-img="images/jersey-running.jpg" data-name="Marathon Singlet Jersey" selected>Marathon Singlet Jersey — Rp 159.000</option>
+                            <option value="jersey-active" data-price="189000" data-img="images/jersey-active.jpg" data-name="AeroDry Active Jersey">AeroDry Active Jersey — Rp 189.000</option>
+                            <option value="jersey-heritage" data-price="219000" data-img="images/jersey-heritage.jpg" data-name="Retro Collar Football Jersey">Retro Collar Football Jersey — Rp 219.000</option>
+                            <option value="jersey-street" data-price="229000" data-img="images/jersey-street.jpg" data-name="Mesh Oversized Street Jersey">Mesh Oversized Street Jersey — Rp 229.000</option>
+                            <option value="jersey-cycling" data-price="249000" data-img="images/jersey-cycling.jpg" data-name="Pro Aero Cycling Jersey">Pro Aero Cycling Jersey — Rp 249.000</option>
+                        </optgroup>
+                        <optgroup label="Kaos T-Shirt Kasual &amp; Streetwear">
+                            <option value="tshirt-oversized" data-price="139000" data-img="images/tshirt-oversized.jpg" data-name="Heavyweight Boxy Oversized Tee">Heavyweight Boxy Oversized Tee — Rp 139.000</option>
+                            <option value="tshirt-graphic" data-price="159000" data-img="images/tshirt-graphic.jpg" data-name="Urban Tokyo Graphic Tee">Urban Tokyo Graphic Tee — Rp 159.000</option>
+                            <option value="tshirt-pocket" data-price="119000" data-img="images/tshirt-pocket.jpg" data-name="Essential Utility Pocket Tee">Essential Utility Pocket Tee — Rp 119.000</option>
+                            <option value="tshirt-acidwash" data-price="149000" data-img="images/tshirt-acidwash.jpg" data-name="Acid Wash Grunge Tee">Acid Wash Grunge Tee — Rp 149.000</option>
+                            <option value="tshirt-stripe" data-price="129000" data-img="images/tshirt-stripe.jpg" data-name="Breton Stripe Nautical Tee">Breton Stripe Nautical Tee — Rp 129.000</option>
+                        </optgroup>
+                    </select>
+                    <a href="detail-produk.html?id=jersey-running" id="slotTopDetailLink" class="detail-button inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200">Lihat Detail Atasan &rarr;</a>
+                </div>
+
+                <!-- Slot 2: Tas & Aksesoris -->
+                <div class="outfit-slot-card flex flex-col p-5 rounded-2xl bg-white border border-gray-200 shadow-sm dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="slot-step-header flex items-center justify-between mb-3">
+                        <span class="slot-badge inline-flex px-2.5 py-1 rounded-full bg-zinc-900 text-white text-[11px] font-bold dark:bg-zinc-100 dark:text-zinc-950">2. Pilih Tas</span>
+                        <span class="slot-price-tag text-sm font-black text-zinc-900 dark:text-zinc-100" id="slotBagPrice">Rp 159.000</span>
+                    </div>
+                    <div class="slot-image-preview aspect-square rounded-xl overflow-hidden bg-gray-100 dark:bg-zinc-800 mb-3 flex items-center justify-center">
+                        <img id="slotBagImg" src="images/tas-waistbag.jpg" alt="Preview Tas Pilihan" class="w-full h-full object-cover">
+                    </div>
+                    <label for="slotBagSelect" class="slot-select-label text-xs font-semibold text-gray-600 dark:text-zinc-400 mb-1.5">Koleksi Tas Urban &amp; Komuter (6 Pilihan):</label>
+                    <select id="slotBagSelect" class="slot-dropdown w-full px-3 py-2 text-xs font-medium rounded-xl border border-gray-200 bg-gray-50 text-zinc-900 mb-3 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                        <option value="tas-waistbag" data-price="159000" data-img="images/tas-waistbag.jpg" data-name="Active Sport Waistbag" selected>Active Sport Waistbag — Rp 159.000</option>
+                        <option value="tas-ransel" data-price="329000" data-img="images/tas-ransel.jpg" data-name="Tas Ransel Urban">Tas Ransel Urban — Rp 329.000</option>
+                        <option value="tas-sling" data-price="199000" data-img="images/tas-sling.jpg" data-name="Tactical Crossbody Sling Bag">Tactical Crossbody Sling Bag — Rp 199.000</option>
+                        <option value="tas-duffle" data-price="389000" data-img="images/tas-duffle.jpg" data-name="Weekender Gym Duffle Bag">Weekender Gym Duffle Bag — Rp 389.000</option>
+                        <option value="tas-tote" data-price="219000" data-img="images/tas-tote.jpg" data-name="Minimalist Tech Tote Bag">Minimalist Tech Tote Bag — Rp 219.000</option>
+                        <option value="tas-briefcase" data-price="429000" data-img="images/tas-briefcase.jpg" data-name="Executive 3-Way Briefcase">Executive 3-Way Briefcase — Rp 429.000</option>
+                    </select>
+                    <a href="detail-produk.html?id=tas-waistbag" id="slotBagDetailLink" class="detail-button inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200">Lihat Detail Tas &rarr;</a>
+                </div>
+
+                <!-- Slot 3: Sepatu & Alas Kaki -->
+                <div class="outfit-slot-card flex flex-col p-5 rounded-2xl bg-white border border-gray-200 shadow-sm dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="slot-step-header flex items-center justify-between mb-3">
+                        <span class="slot-badge inline-flex px-2.5 py-1 rounded-full bg-zinc-900 text-white text-[11px] font-bold dark:bg-zinc-100 dark:text-zinc-950">3. Pilih Sepatu</span>
+                        <span class="slot-price-tag text-sm font-black text-zinc-900 dark:text-zinc-100" id="slotShoePrice">Rp 649.000</span>
+                    </div>
+                    <div class="slot-image-preview aspect-square rounded-xl overflow-hidden bg-gray-100 dark:bg-zinc-800 mb-3 flex items-center justify-center">
+                        <img id="slotShoeImg" src="images/sepatu-running.jpg" alt="Preview Sepatu Pilihan" class="w-full h-full object-cover">
+                    </div>
+                    <label for="slotShoeSelect" class="slot-select-label text-xs font-semibold text-gray-600 dark:text-zinc-400 mb-1.5">Koleksi Sepatu Studio HD (6 Pilihan):</label>
+                    <select id="slotShoeSelect" class="slot-dropdown w-full px-3 py-2 text-xs font-medium rounded-xl border border-gray-200 bg-gray-50 text-zinc-900 mb-3 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                        <option value="sepatu-running" data-price="649000" data-img="images/sepatu-running.jpg" data-name="AeroGlide Running Pro" selected>AeroGlide Running Pro — Rp 649.000</option>
+                        <option value="sepatu-urban" data-price="1799000" data-img="images/sepatu-urban-hd.jpg" data-name="Sepatu Urban">Sepatu Urban — Rp 1.799.000</option>
+                        <option value="sepatu-retro" data-price="589000" data-img="images/sepatu-retro.jpg" data-name="Retro Court Classic">Retro Court Classic — Rp 589.000</option>
+                        <option value="sepatu-slipon" data-price="429000" data-img="images/sepatu-slipon.jpg" data-name="KnitFlow Slip-On">KnitFlow Slip-On — Rp 429.000</option>
+                        <option value="sepatu-hightop" data-price="679000" data-img="images/sepatu-hightop.jpg" data-name="Street High-Top Vulcan">Street High-Top Vulcan — Rp 679.000</option>
+                        <option value="sepatu-trail" data-price="749000" data-img="images/sepatu-trail.jpg" data-name="TerraGrip Trail Hiker">TerraGrip Trail Hiker — Rp 749.000</option>
+                    </select>
+                    <a href="detail-produk.html?id=sepatu-running" id="slotShoeDetailLink" class="detail-button inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-zinc-900 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200">Lihat Detail Sepatu &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Summary Bar & 1-Click Bundle Checkout -->
+            <div class="outfit-summary-bar flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-white border border-gray-200 shadow-md dark:bg-zinc-900 dark:border-zinc-800">
+                <div class="outfit-summary-info">
+                    <span class="outfit-bundle-tag inline-flex px-2.5 py-1 rounded-full bg-amber-500 text-white text-[11px] font-black tracking-wider mb-2">PAKET HEMAT BUNDLE 3 ITEM • DISKON 10%</span>
+                    <p class="outfit-selected-names text-sm font-bold text-zinc-900 dark:text-zinc-100 m-0" id="outfitSelectedNames">Marathon Singlet Jersey + Active Sport Waistbag + AeroGlide Running Pro</p>
+                    <div class="outfit-price-breakdown flex items-baseline gap-3 mt-1.5 flex-wrap">
+                        <span class="outfit-normal-total text-xs text-gray-400 line-through dark:text-zinc-500" id="outfitNormalTotal">Rp 967.000</span>
+                        <span class="outfit-final-total text-xl font-black text-zinc-900 dark:text-zinc-100" id="outfitFinalTotal">Rp 870.300</span>
+                        <span class="outfit-saving-pill inline-flex px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold dark:bg-emerald-950/50 dark:text-emerald-400" id="outfitSavingPill">Hemat Rp 96.700!</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="outfit-checkout-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg dark:bg-emerald-500 dark:hover:bg-emerald-600 whitespace-nowrap shrink-0" id="outfitCheckoutBtn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Pesan Paket Outfit Ini via WhatsApp</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bagian Cara Belanja -->
+        <section class="how-to-shop-section my-16 reveal-on-scroll" id="cara-belanja">
+            <div class="section-heading-block">
+                <p class="section-eyebrow text-xs font-bold tracking-widest text-zinc-500 uppercase m-0 dark:text-zinc-400">PANDUAN PEMESANAN</p>
+                <h2 class="section-main-title text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight m-0 mt-1 dark:text-zinc-100">Cara Belanja Mudah & Cepat</h2>
+                <p class="section-subtext text-sm text-gray-600 m-0 mt-1 dark:text-zinc-400">Belanja perlengkapan urban favorit Anda hanya dalam 4 langkah praktis.</p>
+            </div>
+
+            <div class="steps-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="step-card flex flex-col p-6 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="step-number text-2xl font-black text-gray-300 dark:text-zinc-700 mb-2">01</div>
+                    <h3 class="step-title text-base font-bold text-zinc-900 m-0 mb-1.5 dark:text-zinc-100">Pilih Produk & Varian</h3>
+                    <p class="step-desc text-xs text-gray-500 m-0 leading-relaxed dark:text-zinc-400">Klik "View Detail" untuk melihat foto studio HD penuh serta memilih ukuran atau warna yang sesuai.</p>
+                </div>
+
+                <div class="step-card flex flex-col p-6 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="step-number text-2xl font-black text-gray-300 dark:text-zinc-700 mb-2">02</div>
+                    <h3 class="step-title text-base font-bold text-zinc-900 m-0 mb-1.5 dark:text-zinc-100">Chat via WhatsApp</h3>
+                    <p class="step-desc text-xs text-gray-500 m-0 leading-relaxed dark:text-zinc-400">Klik tombol "Beli Sekarang" atau hubungi admin WhatsApp untuk konfirmasi stok dan detail pesanan.</p>
+                </div>
+
+                <div class="step-card flex flex-col p-6 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="step-number text-2xl font-black text-gray-300 dark:text-zinc-700 mb-2">03</div>
+                    <h3 class="step-title text-base font-bold text-zinc-900 m-0 mb-1.5 dark:text-zinc-100">Pembayaran Aman</h3>
+                    <p class="step-desc text-xs text-gray-500 m-0 leading-relaxed dark:text-zinc-400">Lakukan pembayaran melalui transfer bank resmi, QRIS, atau e-wallet pilihan Anda dengan aman.</p>
+                </div>
+
+                <div class="step-card flex flex-col p-6 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                    <div class="step-number text-2xl font-black text-gray-300 dark:text-zinc-700 mb-2">04</div>
+                    <h3 class="step-title text-base font-bold text-zinc-900 m-0 mb-1.5 dark:text-zinc-100">Pengiriman Cepat</h3>
+                    <p class="step-desc text-xs text-gray-500 m-0 leading-relaxed dark:text-zinc-400">Pesanan Anda dikemas rapi dan dikirim dengan nomor resi yang dapat dilacak secara langsung.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Tentang Kami -->
+        <section class="about-section my-16 p-8 md:p-12 rounded-3xl bg-linear-to-br from-white via-gray-50 to-gray-100 border border-gray-200/80 shadow-sm dark:from-zinc-900/90 dark:via-zinc-900 dark:to-zinc-950 dark:border-zinc-800 reveal-on-scroll" id="tentang">
+            <div class="about-container grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="about-content lg:col-span-7 flex flex-col gap-4">
+                    <p class="section-eyebrow text-xs font-bold tracking-widest text-zinc-500 uppercase m-0 dark:text-zinc-400">TENTANG KAMI</p>
+                    <h2 class="section-main-title text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight m-0 dark:text-zinc-100">Teman Nyaman untuk Langkah Sehari-hari</h2>
+                    <p class="about-paragraph text-sm text-gray-600 leading-relaxed m-0 dark:text-zinc-400">
+                        <strong class="text-zinc-900 dark:text-zinc-100">TOKO URBAN (IGAS STORE)</strong> hadir untuk menjawab kebutuhan masyarakat perkotaan akan produk sepatu kasual, tas komuter, baju jersey olahraga, dan t-shirt yang mengedepankan keseimbangan antara gaya minimalis modern, fungsionalitas, dan kenyamanan optimal.
+                    </p>
+                    <p class="about-paragraph text-sm text-gray-600 leading-relaxed m-0 dark:text-zinc-400">
+                        Setiap produk kami dikurasi dengan standar ketat dan ditampilkan melalui fotografi studio HD yang jujur serta proporsional—sehingga barang yang Anda lihat di katalog maupun halaman detail sama persis dengan produk yang Anda terima.
+                    </p>
+                </div>
+
+                <div class="about-values-grid lg:col-span-5 flex flex-col gap-4">
+                    <div class="value-item flex items-start gap-3.5 p-4 rounded-xl bg-white/80 border border-gray-200/70 shadow-xs dark:bg-zinc-800/80 dark:border-zinc-700/60">
+                        <div class="value-badge flex items-center justify-center w-7 h-7 rounded-full bg-zinc-900 text-white font-bold text-xs shrink-0 dark:bg-white dark:text-zinc-950">✓</div>
+                        <div>
+                            <h4 class="value-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Kualitas Terjamin</h4>
+                            <p class="value-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Bahan premium dan jahitan presisi untuk daya tahan jangka panjang.</p>
+                        </div>
+                    </div>
+                    <div class="value-item flex items-start gap-3.5 p-4 rounded-xl bg-white/80 border border-gray-200/70 shadow-xs dark:bg-zinc-800/80 dark:border-zinc-700/60">
+                        <div class="value-badge flex items-center justify-center w-7 h-7 rounded-full bg-zinc-900 text-white font-bold text-xs shrink-0 dark:bg-white dark:text-zinc-950">✓</div>
+                        <div>
+                            <h4 class="value-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Kenyamanan Nyata</h4>
+                            <p class="value-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Desain ergonomis yang dirancang khusus untuk mobilitas perkotaan.</p>
+                        </div>
+                    </div>
+                    <div class="value-item flex items-start gap-3.5 p-4 rounded-xl bg-white/80 border border-gray-200/70 shadow-xs dark:bg-zinc-800/80 dark:border-zinc-700/60">
+                        <div class="value-badge flex items-center justify-center w-7 h-7 rounded-full bg-zinc-900 text-white font-bold text-xs shrink-0 dark:bg-white dark:text-zinc-950">✓</div>
+                        <div>
+                            <h4 class="value-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Pelayanan Ramah</h4>
+                            <p class="value-desc text-xs text-gray-500 m-0 mt-0.5 leading-snug dark:text-zinc-400">Customer service responsif yang siap membantu kebutuhan Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian FAQ (Tanya Jawab) -->
+        <section class="faq-section reveal-on-scroll" id="faq">
+            <div class="section-heading-block">
+                <p class="section-eyebrow">FAQ & BANTUAN</p>
+                <h2 class="section-main-title">Pertanyaan yang Sering Diajukan</h2>
+                <p class="section-subtext">Temukan jawaban cepat seputar panduan ukuran, garansi, pemesanan, dan pengiriman kami.</p>
+            </div>
+
+            <div class="faq-accordion-wrap">
+                <!-- FAQ Item 1 -->
+                <details class="faq-item" open>
+                    <summary class="faq-question">
+                        <span>Bagaimana cara memilih ukuran sepatu, jersey, atau t-shirt yang tepat?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Koleksi Sepatu Urban menggunakan ukuran standar lokal Indonesia (tersedia size 38 hingga 44), sedangkan koleksi Jersey & T-Shirt tersedia dalam ukuran S hingga XXL. Klik tombol <strong>"View Detail"</strong> pada produk yang Anda inginkan untuk memilih ukuran yang tersedia atau konsultasikan langsung ke admin via WhatsApp.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Apakah ada garansi jika ukuran produk tidak cocok?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p><strong>Ya, 100% Bergaransi!</strong> Kami menyediakan layanan <strong>Garansi Tukar Ukuran dalam 7 hari</strong> setelah barang Anda terima. Syaratnya sangat mudah: produk belum dipakai beraktivitas luar ruangan, label masih terpasang, dan kemasan dalam kondisi baik.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Berapa lama estimasi pengiriman dan apakah ada nomor resi?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Pengiriman dikirim langsung dari warehouse Denpasar, Bali. Estimasi pengiriman untuk wilayah Denpasar & sekitarnya adalah <strong>1–2 hari kerja</strong> (bisa same-day/instant). Untuk pulau Jawa dan seluruh Indonesia berkisar <strong>2–4 hari kerja</strong>. Segera setelah paket diserahkan ke kurir, nomor resi pelacakan online akan langsung kami infokan ke WhatsApp Anda.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Metode pembayaran apa saja yang didukung?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Kami menerima transfer bank resmi (BCA, Mandiri, BRI, BNI), pembayaran instan via <strong>QRIS</strong>, serta e-wallet terpopuler (GoPay, OVO, ShopeePay, DANA). Proses verifikasi pembayaran dilakukan secara cepat tanpa biaya administrasi tambahan.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 5 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Apakah foto produk di katalog sesuai dengan barang aslinya?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Tentu! Seluruh produk di katalog kami menggunakan <strong>foto studio HD bergaya minimalis</strong> yang serasi dan konsisten antara halaman katalog utama dengan halaman <strong>View Detail</strong>, sehingga Anda melihat tekstur, warna, dan proporsi produk secara akurat.</p>
+                    </div>
+                </details>
+
+                <!-- FAQ Item 6 -->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Bagaimana cara memesan langsung lewat WhatsApp?</span>
+                        <span class="faq-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sangat mudah! Anda cukup mengklik tombol <strong>"Beli Cepat"</strong> di kartu katalog atau klik <strong>"View Detail"</strong> lalu pilih ukuran dan tekan <strong>"Beli Sekarang via WhatsApp"</strong>. Sistem kami otomatis menyiapkan pesan pesanan sesuai produk dan ukuran pilihan Anda.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Kartu Bantuan Tambahan di Bawah FAQ -->
+            <div class="faq-support-box">
+                <div class="faq-support-text">
+                    <h3 class="faq-support-title">Punya Pertanyaan Lain yang Belum Terjawab?</h3>
+                    <p class="faq-support-desc">Customer service kami ramah dan siap membantu rekomendasi produk setiap hari pukul 09.00 - 21.00 WITA.</p>
+                </div>
+                <a href="https://wa.me/6281234567890?text=Halo%20Toko%20Urban,%20saya%20punya%20pertanyaan%20seputar%20produk" target="_blank" rel="noopener noreferrer" class="faq-support-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Tanya CS via WhatsApp</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak -->
+        <section class="contact-section my-16 reveal-on-scroll" id="kontak">
+            <div class="contact-header text-center max-w-2xl mx-auto mb-10">
+                <p class="contact-badge inline-flex px-3 py-1 rounded-full bg-zinc-900 text-white text-[11px] font-bold tracking-widest mb-3 dark:bg-white dark:text-zinc-950">HUBUNGI KAMI</p>
+                <h2 class="contact-title text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight m-0 dark:text-zinc-100">Ada Pertanyaan? Kami Siap Membantu</h2>
+                <p class="contact-subtitle text-sm text-gray-600 m-0 mt-2 leading-relaxed dark:text-zinc-400">
+                    Punya pertanyaan tentang produk, ukuran, atau ingin memesan langsung? Hubungi kami lewat kontak di bawah atau kirimkan pesan Anda.
+                </p>
+            </div>
+
+            <div class="contact-wrapper grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Kolom Informasi Kontak -->
+                <div class="contact-cards lg:col-span-5 flex flex-col gap-4">
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="contact-card-item flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs hover:shadow-md transition-all dark:bg-zinc-900 dark:border-zinc-800">
+                        <div class="contact-icon-box whatsapp-icon flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 shrink-0 dark:bg-emerald-950/40 dark:text-emerald-400">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label-tag text-[11px] font-bold text-emerald-600 dark:text-emerald-400">Chat Langsung</span>
+                            <h3 class="contact-method-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">WhatsApp Resmi</h3>
+                            <p class="contact-value text-xs text-gray-500 m-0 dark:text-zinc-400">+62 812-3456-7890</p>
+                            <span class="contact-action-hint text-xs font-semibold text-zinc-900 dark:text-zinc-200">Buka percakapan &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:info@igasstore.com" class="contact-card-item flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs hover:shadow-md transition-all dark:bg-zinc-900 dark:border-zinc-800">
+                        <div class="contact-icon-box email-icon flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 shrink-0 dark:bg-blue-950/40 dark:text-blue-400">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label-tag text-[11px] font-bold text-blue-600 dark:text-blue-400">Respon Cepat</span>
+                            <h3 class="contact-method-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Email Customer Care</h3>
+                            <p class="contact-value text-xs text-gray-500 m-0 dark:text-zinc-400">info@igasstore.com</p>
+                            <span class="contact-action-hint text-xs font-semibold text-zinc-900 dark:text-zinc-200">Kirim email &rarr;</span>
+                        </div>
+                    </a>
+
+                    <div class="contact-card-item non-clickable flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs dark:bg-zinc-900 dark:border-zinc-800">
+                        <div class="contact-icon-box location-icon flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-100 text-zinc-800 shrink-0 dark:bg-zinc-800 dark:text-zinc-200">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label-tag text-[11px] font-bold text-gray-500 dark:text-zinc-400">Toko & Warehouse</span>
+                            <h3 class="contact-method-title text-sm font-bold text-zinc-900 m-0 dark:text-zinc-100">Lokasi Kami</h3>
+                            <p class="contact-value text-xs text-gray-500 m-0 dark:text-zinc-400">Denpasar, Bali - Indonesia</p>
+                            <span class="contact-meta-info text-[11px] text-gray-400 dark:text-zinc-500">Buka Setiap Hari: 09:00 - 21:00 WITA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulir Pesan Kontak Cepat -->
+                <div class="contact-form-container lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-white border border-gray-200/90 shadow-sm dark:bg-zinc-900 dark:border-zinc-800">
+                    <h3 class="form-title text-lg font-bold text-zinc-900 m-0 mb-1 dark:text-zinc-100">Tinggalkan Pesan Cepat</h3>
+                    <p class="form-description text-xs text-gray-500 m-0 mb-6 dark:text-zinc-400">Isi formulir di bawah ini dan tim kami akan menghubungi Anda kembali via email atau WhatsApp.</p>
+                    <form class="contact-form flex flex-col gap-4" id="contactForm">
+                        <div class="form-group flex flex-col gap-1.5">
+                            <label for="contact-name" class="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Nama Lengkap</label>
+                            <input type="text" id="contact-name" name="name" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-xs font-medium text-zinc-900 focus:outline-none focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-zinc-100 transition-colors" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group flex flex-col gap-1.5">
+                            <label for="contact-email" class="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Alamat Email</label>
+                            <input type="email" id="contact-email" name="email" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-xs font-medium text-zinc-900 focus:outline-none focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-zinc-100 transition-colors" placeholder="nama@email.com" required>
+                        </div>
+                        <div class="form-group flex flex-col gap-1.5">
+                            <label for="contact-subject" class="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Keperluan</label>
+                            <select id="contact-subject" name="subject" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-xs font-medium text-zinc-900 focus:outline-none focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-zinc-100 transition-colors">
+                                <option value="tanya-produk">Pertanyaan Produk</option>
+                                <option value="pemesanan">Bantuan Pemesanan</option>
+                                <option value="konfirmasi">Konfirmasi Pembayaran</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group flex flex-col gap-1.5">
+                            <label for="contact-message" class="text-xs font-semibold text-zinc-800 dark:text-zinc-200">Pesan Anda</label>
+                            <textarea id="contact-message" name="message" rows="4" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 bg-gray-50 text-xs font-medium text-zinc-900 focus:outline-none focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-zinc-100 transition-colors" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit-btn inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-zinc-900 text-white font-bold text-xs hover:bg-zinc-800 transition-colors cursor-pointer dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200 self-start shadow-sm mt-2" id="submitBtn">
+                            <span class="btn-text">Kirim Pesan</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Komponen Footer -->
+    <footer class="site-footer mt-16 py-12 border-t border-gray-200 bg-white dark:bg-zinc-950 dark:border-zinc-800">
+        <div class="footer-container max-w-[1120px] mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <p class="footer-brand text-xs text-gray-500 m-0 dark:text-zinc-400"><strong class="font-bold text-zinc-900 dark:text-zinc-100">TOKO URBAN</strong> — Teman nyaman untuk langkah sehari-hari.</p>
+            <nav class="footer-nav">
+                <ul class="footer-links flex items-center gap-5 list-none m-0 p-0 text-xs font-semibold text-gray-600 dark:text-zinc-400">
+                    <li><a href="#tentang" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Tentang Kami</a></li>
+                    <li><a href="#cara-belanja" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Cara Belanja</a></li>
+                    <li><a href="#faq" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">FAQ</a></li>
+                    <li><a href="#kontak" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Kontak</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copyright text-xs text-gray-400 m-0 dark:text-zinc-500">&copy; 2026 Toko Urban (IGAS STORE). Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons: Back to Top & WhatsApp -->
+    <div class="floating-actions-wrap">
+        <!-- Back to Top Button -->
+        <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Kembali ke atas">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+
+        <!-- Floating WhatsApp Button dengan Ambient Wave -->
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Hubungi WhatsApp">
+            <span class="wa-pulse-ring"></span>
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- FITUR 8: FLOATING COMPARE BAR & MODAL BANDINGKAN PRODUK -->
+    <div class="compare-floating-bar" id="compareFloatingBar" role="region" aria-label="Bandingkan Produk Pilihan">
+        <div class="compare-bar-items" id="compareBarItems">
+            <!-- Diisi otomatis via JS -->
+        </div>
+        <div class="compare-bar-actions">
+            <button type="button" class="compare-clear-btn" id="compareClearBtn">Reset</button>
+            <button type="button" class="compare-open-modal-btn" id="compareOpenModalBtn">Bandingkan Sekarang (0)</button>
+        </div>
+    </div>
+
+    <div class="compare-modal-overlay" id="compareModalOverlay" role="dialog" aria-modal="true" aria-labelledby="compareModalTitle">
+        <div class="compare-modal-box">
+            <div class="compare-modal-header">
+                <h3 class="compare-modal-title" id="compareModalTitle">Perbandingan Spesifikasi Produk Studio HD</h3>
+                <button type="button" class="compare-modal-close" id="compareModalClose" aria-label="Tutup Perbandingan">&times;</button>
+            </div>
+            <div class="compare-modal-body" id="compareModalBody">
+                <!-- Tabel perbandingan dirender via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Interaktivitas & Micro-interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Helper Toast Notification
+            const toast = document.getElementById('toastNotification');
+            const toastTitle = document.getElementById('toastTitle');
+            const toastDesc = document.getElementById('toastDesc');
+            let toastTimer;
+
+            const showToast = (title, desc) => {
+                if (!toast) return;
+                if (toastTitle) toastTitle.textContent = title;
+                if (toastDesc) toastDesc.textContent = desc;
+                clearTimeout(toastTimer);
+                toast.classList.add('show');
+                toastTimer = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3800);
+            };
+
+            // =========================================================================
+            // FITUR 2: DARK MODE MONOKROM THEME TOGGLE
+            // =========================================================================
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const themeToggleIcon = document.getElementById('themeToggleIcon');
+            const themeToggleText = document.getElementById('themeToggleText');
+
+            const MOON_SVG_PATH = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            const SUN_SVG_PATH = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+
+            const syncThemeUI = (theme) => {
+                if (theme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    if (themeToggleIcon) themeToggleIcon.innerHTML = SUN_SVG_PATH;
+                    if (themeToggleText) themeToggleText.textContent = 'Mode Terang';
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    if (themeToggleIcon) themeToggleIcon.innerHTML = MOON_SVG_PATH;
+                    if (themeToggleText) themeToggleText.textContent = 'Mode Gelap';
+                }
+            };
+
+            syncThemeUI(localStorage.getItem('igas_theme') || 'light');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    localStorage.setItem('igas_theme', nextTheme);
+                    syncThemeUI(nextTheme);
+                });
+            }
+
+            // 1. Header Sticky Elevation & Scrollspy Active State
+            const header = document.getElementById('mainHeader');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            const backToTopBtn = document.getElementById('backToTopBtn');
+
+            const handleScroll = () => {
+                const scrollY = window.pageYOffset;
+
+                if (scrollY > 30) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                if (scrollY > 350) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 120;
+                    const sectionId = current.getAttribute('id');
+
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 2. Mobile Menu Toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mainNavbar = document.getElementById('mainNavbar');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                const isOpen = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+                mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+                mobileMenuToggle.classList.toggle('active');
+                mainNavbar.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    mobileMenuToggle.classList.remove('active');
+                    mainNavbar.classList.remove('active');
+                });
+            });
+
+            // 3. Hero Visual Angle Switcher
+            const heroImg = document.getElementById('heroShowcaseImg');
+            const heroAngleBtns = document.querySelectorAll('.hero-angle-btn');
+            heroAngleBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const newSrc = btn.getAttribute('data-src');
+                    if (newSrc && heroImg) {
+                        heroImg.style.opacity = '0.3';
+                        heroImg.style.transform = 'scale(0.96)';
+                        setTimeout(() => {
+                            heroImg.src = newSrc;
+                            heroImg.style.opacity = '1';
+                            heroImg.style.transform = 'scale(1)';
+                        }, 120);
+
+                        heroAngleBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    }
+                });
+            });
+
+            // 4. Katalog: Multi-Angle Thumbnail Switcher
+            const thumbButtons = document.querySelectorAll('.thumb-btn');
+            thumbButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const parentThumbnails = btn.closest('.product-thumbnails');
+                    const targetId = btn.getAttribute('data-target');
+                    const newSrc = btn.getAttribute('data-src');
+                    const targetImg = document.getElementById(targetId);
+
+                    if (targetImg && newSrc) {
+                        targetImg.style.opacity = '0.3';
+                        setTimeout(() => {
+                            targetImg.src = newSrc;
+                            targetImg.style.opacity = '1';
+                        }, 120);
+
+                        parentThumbnails.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    }
+                });
+            });
+
+            // 5. Katalog: Layout Switcher (Grid / Showcase / List)
+            const layoutButtons = document.querySelectorAll('.layout-btn');
+            const productGrid = document.getElementById('productGridContainer');
+
+            layoutButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const selectedLayout = btn.getAttribute('data-layout');
+                    layoutButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    productGrid.classList.remove('layout-grid', 'layout-showcase', 'layout-list');
+                    productGrid.classList.add(`layout-${selectedLayout}`);
+                });
+            });
+
+            // =========================================================================
+            // FITUR 4: ASISTEN PINTAR "CARI PRODUK SESUAI AKTIVITASMU" + FILTER KATEGORI
+            // =========================================================================
+            const PRODUCT_ACTIVITIES = {
+                'sepatu-urban': ['commute', 'streetwear'],
+                'sepatu-running': ['sport'],
+                'sepatu-retro': ['streetwear', 'commute'],
+                'sepatu-slipon': ['commute', 'outdoor'],
+                'sepatu-hightop': ['streetwear'],
+                'sepatu-trail': ['outdoor', 'sport'],
+                'tas-ransel': ['commute', 'outdoor'],
+                'tas-sling': ['streetwear', 'outdoor'],
+                'tas-duffle': ['sport', 'outdoor'],
+                'tas-waistbag': ['sport', 'streetwear'],
+                'tas-tote': ['commute', 'streetwear'],
+                'tas-briefcase': ['commute'],
+                'jersey-active': ['sport'],
+                'jersey-heritage': ['streetwear', 'sport'],
+                'jersey-running': ['sport'],
+                'jersey-street': ['streetwear', 'outdoor'],
+                'jersey-cycling': ['sport', 'outdoor'],
+                'tshirt-oversized': ['streetwear', 'commute'],
+                'tshirt-graphic': ['streetwear'],
+                'tshirt-pocket': ['commute', 'outdoor'],
+                'tshirt-acidwash': ['streetwear', 'outdoor'],
+                'tshirt-stripe': ['commute', 'streetwear']
+            };
+
+            const ACTIVITY_DESCRIPTIONS = {
+                sport: 'Rekomendasi Lari, Gym & Olahraga: Material breathable cepat kering, bobot ultra-ringan, dan bantalan responsif.',
+                commute: 'Rekomendasi Ngantor, Kuliah & Komuter: Desain minimalis rapi, kompartemen laptop aman, dan pijakan nyaman seharian.',
+                streetwear: 'Rekomendasi Nongkrong & Streetwear: Siluet boxy modern, aksen retro/vintage, dan statement gaya urban yang ikonik.',
+                outdoor: 'Rekomendasi Riding, Touring & Traveling: Bahan tahan cipratan air, kapasitas ekstra, dan sol bergrip tangguh di segala medan.'
+            };
+
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const activityButtons = document.querySelectorAll('.activity-pill-btn');
+            const activityRecBanner = document.getElementById('activityRecBanner');
+            const activityRecText = document.getElementById('activityRecText');
+            const activityToBuilderBtn = document.getElementById('activityToBuilderBtn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            // Tandai setiap kartu dengan data-id & data-activities berdasarkan link detail
+            productCards.forEach(card => {
+                const detailLink = card.querySelector('.detail-button');
+                if (detailLink) {
+                    const href = detailLink.getAttribute('href') || '';
+                    const match = href.match(/id=([^&]+)/);
+                    const prodId = match ? match[1] : '';
+                    card.setAttribute('data-id', prodId);
+                    const acts = PRODUCT_ACTIVITIES[prodId] || ['commute', 'streetwear'];
+                    card.setAttribute('data-activities', acts.join(','));
+                }
+            });
+
+            let activeCategory = 'all';
+            let activeActivity = 'all';
+
+            const applyCatalogFilters = () => {
+                productCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const activities = (card.getAttribute('data-activities') || '').split(',');
+                    const matchCategory = activeCategory === 'all' || category === activeCategory;
+                    const matchActivity = activeActivity === 'all' || activities.includes(activeActivity);
+
+                    if (matchCategory && matchActivity) {
+                        card.style.display = '';
+                        card.style.animation = 'fadeInCard 0.3s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (activeActivity !== 'all' && ACTIVITY_DESCRIPTIONS[activeActivity]) {
+                    activityRecText.textContent = ACTIVITY_DESCRIPTIONS[activeActivity];
+                    activityRecBanner.classList.add('show');
+                    if (activityToBuilderBtn) {
+                        activityToBuilderBtn.setAttribute('data-target-preset', activeActivity);
+                    }
+                } else {
+                    activityRecBanner.classList.remove('show');
+                }
+            };
+
+            tabButtons.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    activeCategory = tab.getAttribute('data-filter');
+                    tabButtons.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    applyCatalogFilters();
+                });
+            });
+
+            activityButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    activeActivity = btn.getAttribute('data-activity');
+                    activityButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyCatalogFilters();
+                });
+            });
+
+            // =========================================================================
+            // FITUR 1: MIX & MATCH OUTFIT BUILDER (RAKIT SETELAN + DISKON 10%)
+            // =========================================================================
+            const slotTopSelect = document.getElementById('slotTopSelect');
+            const slotBagSelect = document.getElementById('slotBagSelect');
+            const slotShoeSelect = document.getElementById('slotShoeSelect');
+
+            const slotTopImg = document.getElementById('slotTopImg');
+            const slotBagImg = document.getElementById('slotBagImg');
+            const slotShoeImg = document.getElementById('slotShoeImg');
+
+            const slotTopPrice = document.getElementById('slotTopPrice');
+            const slotBagPrice = document.getElementById('slotBagPrice');
+            const slotShoePrice = document.getElementById('slotShoePrice');
+
+            const slotTopDetailLink = document.getElementById('slotTopDetailLink');
+            const slotBagDetailLink = document.getElementById('slotBagDetailLink');
+            const slotShoeDetailLink = document.getElementById('slotShoeDetailLink');
+
+            const outfitSelectedNames = document.getElementById('outfitSelectedNames');
+            const outfitNormalTotal = document.getElementById('outfitNormalTotal');
+            const outfitFinalTotal = document.getElementById('outfitFinalTotal');
+            const outfitSavingPill = document.getElementById('outfitSavingPill');
+            const outfitCheckoutBtn = document.getElementById('outfitCheckoutBtn');
+            const presetButtons = document.querySelectorAll('.outfit-preset-btn');
+
+            const formatRupiah = (num) => 'Rp ' + Math.round(num).toLocaleString('id-ID');
+
+            const OUTFIT_PRESETS = {
+                sport: { top: 'jersey-running', bag: 'tas-waistbag', shoe: 'sepatu-running' },
+                commute: { top: 'tshirt-pocket', bag: 'tas-briefcase', shoe: 'sepatu-slipon' },
+                streetwear: { top: 'tshirt-graphic', bag: 'tas-sling', shoe: 'sepatu-hightop' },
+                outdoor: { top: 'jersey-street', bag: 'tas-ransel', shoe: 'sepatu-trail' }
+            };
+
+            const updateSlotVisual = (selectEl, imgEl, priceEl, linkEl) => {
+                const opt = selectEl.options[selectEl.selectedIndex];
+                const price = parseInt(opt.getAttribute('data-price'), 10) || 0;
+                const imgSrc = opt.getAttribute('data-img');
+                const name = opt.getAttribute('data-name');
+                const id = selectEl.value;
+
+                if (imgEl && imgEl.getAttribute('src') !== imgSrc) {
+                    imgEl.style.opacity = '0.35';
+                    setTimeout(() => {
+                        imgEl.src = imgSrc;
+                        imgEl.alt = name;
+                        imgEl.style.opacity = '1';
+                    }, 110);
+                }
+                if (priceEl) priceEl.textContent = formatRupiah(price);
+                if (linkEl) linkEl.href = `detail-produk.html?id=${id}`;
+
+                return { id, name, price };
+            };
+
+            const recalculateOutfit = () => {
+                if (!slotTopSelect || !slotBagSelect || !slotShoeSelect) return;
+
+                const topItem = updateSlotVisual(slotTopSelect, slotTopImg, slotTopPrice, slotTopDetailLink);
+                const bagItem = updateSlotVisual(slotBagSelect, slotBagImg, slotBagPrice, slotBagDetailLink);
+                const shoeItem = updateSlotVisual(slotShoeSelect, slotShoeImg, slotShoePrice, slotShoeDetailLink);
+
+                const normalTotal = topItem.price + bagItem.price + shoeItem.price;
+                const discountAmount = Math.round(normalTotal * 0.10);
+                const finalTotal = normalTotal - discountAmount;
+
+                if (outfitSelectedNames) {
+                    outfitSelectedNames.textContent = `${topItem.name} + ${bagItem.name} + ${shoeItem.name}`;
+                }
+                if (outfitNormalTotal) outfitNormalTotal.textContent = formatRupiah(normalTotal);
+                if (outfitFinalTotal) outfitFinalTotal.textContent = formatRupiah(finalTotal);
+                if (outfitSavingPill) outfitSavingPill.textContent = `Hemat ${formatRupiah(discountAmount)} (10%)!`;
+
+                if (outfitCheckoutBtn) {
+                    const waText = `Halo IGAS STORE, saya ingin pesan *Paket Mix & Match Outfit (Diskon 10%)*:\n1. Atasan: ${topItem.name} (${formatRupiah(topItem.price)})\n2. Tas: ${bagItem.name} (${formatRupiah(bagItem.price)})\n3. Sepatu: ${shoeItem.name} (${formatRupiah(shoeItem.price)})\nTotal Normal: ${formatRupiah(normalTotal)}\n*Harga Paket Diskon 10%: ${formatRupiah(finalTotal)}*`;
+                    outfitCheckoutBtn.href = `https://wa.me/6281234567890?text=${encodeURIComponent(waText)}`;
+                }
+            };
+
+            [slotTopSelect, slotBagSelect, slotShoeSelect].forEach(sel => {
+                if (sel) {
+                    sel.addEventListener('change', () => {
+                        presetButtons.forEach(b => b.classList.remove('active'));
+                        recalculateOutfit();
+                    });
+                }
+            });
+
+            const applyPreset = (presetKey) => {
+                const preset = OUTFIT_PRESETS[presetKey];
+                if (!preset) return;
+                slotTopSelect.value = preset.top;
+                slotBagSelect.value = preset.bag;
+                slotShoeSelect.value = preset.shoe;
+                presetButtons.forEach(b => {
+                    b.classList.toggle('active', b.getAttribute('data-preset') === presetKey);
+                });
+                recalculateOutfit();
+            };
+
+            presetButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    applyPreset(btn.getAttribute('data-preset'));
+                });
+            });
+
+            if (activityToBuilderBtn) {
+                activityToBuilderBtn.addEventListener('click', () => {
+                    const targetPreset = activityToBuilderBtn.getAttribute('data-target-preset');
+                    if (targetPreset && OUTFIT_PRESETS[targetPreset]) {
+                        applyPreset(targetPreset);
+                    }
+                });
+            }
+
+            recalculateOutfit();
+
+            // =========================================================================
+            // FITUR 8: BANDINGKAN PRODUK SIDE-BY-SIDE (MAKSIMAL 3 PRODUK)
+            // =========================================================================
+            const compareFloatingBar = document.getElementById('compareFloatingBar');
+            const compareBarItems = document.getElementById('compareBarItems');
+            const compareOpenModalBtn = document.getElementById('compareOpenModalBtn');
+            const compareClearBtn = document.getElementById('compareClearBtn');
+            const compareModalOverlay = document.getElementById('compareModalOverlay');
+            const compareModalClose = document.getElementById('compareModalClose');
+            const compareModalBody = document.getElementById('compareModalBody');
+
+            let comparedProducts = [];
+
+            // Ekstrak data tiap kartu & tambahkan tombol "⚖️ Bandingkan" di sudut atas foto
+            const catalogDataMap = {};
+            productCards.forEach(card => {
+                const prodId = card.getAttribute('data-id');
+                if (!prodId) return;
+
+                const name = (card.querySelector('.product-name')?.textContent || '').trim();
+                const categoryLabel = (card.querySelector('.product-category')?.textContent || '').trim();
+                const rating = (card.querySelector('.rating-score')?.textContent || '').trim();
+                const pricePromo = (card.querySelector('.product-price')?.textContent || '').trim();
+                const priceOrig = (card.querySelector('.price-original')?.textContent || '').trim();
+                const desc = (card.querySelector('.product-description')?.textContent || '').trim();
+                const imgSrc = card.querySelector('.product-image')?.getAttribute('src') || '';
+                const specs = Array.from(card.querySelectorAll('.spec-tag')).map(el => el.textContent.trim());
+                const quickBuyHref = card.querySelector('.quick-buy-btn')?.getAttribute('href') || '#';
+                const detailHref = card.querySelector('.detail-button')?.getAttribute('href') || '#';
+
+                catalogDataMap[prodId] = {
+                    id: prodId,
+                    name,
+                    categoryLabel,
+                    rating,
+                    pricePromo,
+                    priceOrig,
+                    desc,
+                    imgSrc,
+                    specs,
+                    quickBuyHref,
+                    detailHref
+                };
+
+                const mediaFrame = card.querySelector('.product-media-frame');
+                if (mediaFrame) {
+                    const compBtn = document.createElement('button');
+                    compBtn.type = 'button';
+                    compBtn.className = 'compare-toggle-btn';
+                    compBtn.setAttribute('data-compare-id', prodId);
+                    compBtn.textContent = '+ Bandingkan';
+                    compBtn.addEventListener('click', () => toggleCompareItem(prodId));
+                    mediaFrame.appendChild(compBtn);
+                }
+            });
+
+            const updateCompareUI = () => {
+                // Update tombol di kartu
+                document.querySelectorAll('.compare-toggle-btn').forEach(btn => {
+                    const id = btn.getAttribute('data-compare-id');
+                    const isSelected = comparedProducts.includes(id);
+                    btn.classList.toggle('active', isSelected);
+                    btn.textContent = isSelected ? '✓ Terpilih' : '+ Bandingkan';
+                });
+
+                // Update floating bar
+                if (comparedProducts.length === 0) {
+                    compareFloatingBar.classList.remove('show');
+                    return;
+                }
+
+                compareFloatingBar.classList.add('show');
+                compareOpenModalBtn.textContent = `Bandingkan Sekarang (${comparedProducts.length}/3)`;
+
+                compareBarItems.innerHTML = comparedProducts.map(id => {
+                    const item = catalogDataMap[id];
+                    return `
+                        <div class="compare-mini-chip">
+                            <img src="${item.imgSrc}" alt="${item.name}">
+                            <span>${item.name}</span>
+                            <button type="button" class="compare-chip-remove" data-remove-id="${id}" title="Hapus">&times;</button>
+                        </div>
+                    `;
+                }).join('');
+
+                compareBarItems.querySelectorAll('.compare-chip-remove').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        toggleCompareItem(btn.getAttribute('data-remove-id'));
+                    });
+                });
+            };
+
+            const toggleCompareItem = (prodId) => {
+                const idx = comparedProducts.indexOf(prodId);
+                if (idx > -1) {
+                    comparedProducts.splice(idx, 1);
+                } else {
+                    if (comparedProducts.length >= 3) {
+                        showToast('Maksimal 3 Produk', 'Anda dapat membandingkan maksimal 3 produk sekaligus. Hapus salah satu untuk mengganti.');
+                        return;
+                    }
+                    comparedProducts.push(prodId);
+                }
+                updateCompareUI();
+            };
+
+            const renderCompareModal = () => {
+                if (comparedProducts.length === 0) return;
+                const items = comparedProducts.map(id => catalogDataMap[id]);
+
+                compareModalBody.innerHTML = `
+                    <table class="compare-table">
+                        <tbody>
+                            <tr>
+                                <th>Produk Studio HD</th>
+                                ${items.map(item => `
+                                    <td>
+                                        <img src="${item.imgSrc}" alt="${item.name}" class="compare-prod-img">
+                                        <h4 class="compare-prod-title">${item.name}</h4>
+                                        <span style="font-size: 12px; color: var(--text-muted);">${item.categoryLabel}</span>
+                                    </td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <th>Harga Penawaran</th>
+                                ${items.map(item => `
+                                    <td>
+                                        <div class="compare-prod-price">${item.pricePromo}</div>
+                                        <span style="font-size: 12px; color: var(--text-muted); text-decoration: line-through;">${item.priceOrig}</span>
+                                    </td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <th>Rating Pembeli</th>
+                                ${items.map(item => `
+                                    <td><strong style="color: #f59e0b;">★★★★★</strong> ${item.rating}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <th>Spesifikasi Utama</th>
+                                ${items.map(item => `
+                                    <td>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                            ${item.specs.map(s => `<span class="spec-tag">${s}</span>`).join('')}
+                                        </div>
+                                    </td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <th>Keunggulan Produk</th>
+                                ${items.map(item => `
+                                    <td style="font-size: 13px; line-height: 1.55;">${item.desc}</td>
+                                `).join('')}
+                            </tr>
+                            <tr>
+                                <th>Aksi Cepat</th>
+                                ${items.map(item => `
+                                    <td>
+                                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                            <a href="${item.detailHref}" class="detail-button" style="padding: 8px 12px; font-size: 12.5px;">View Detail &rarr;</a>
+                                            <a href="${item.quickBuyHref}" target="_blank" rel="noopener noreferrer" class="quick-buy-btn" style="padding: 8px 12px; font-size: 12.5px;">Beli WA</a>
+                                        </div>
+                                    </td>
+                                `).join('')}
+                            </tr>
+                        </tbody>
+                    </table>
+                `;
+                compareModalOverlay.classList.add('open');
+            };
+
+            if (compareOpenModalBtn) {
+                compareOpenModalBtn.addEventListener('click', renderCompareModal);
+            }
+            if (compareClearBtn) {
+                compareClearBtn.addEventListener('click', () => {
+                    comparedProducts = [];
+                    updateCompareUI();
+                });
+            }
+            if (compareModalClose) {
+                compareModalClose.addEventListener('click', () => {
+                    compareModalOverlay.classList.remove('open');
+                });
+            }
+            if (compareModalOverlay) {
+                compareModalOverlay.addEventListener('click', (e) => {
+                    if (e.target === compareModalOverlay) {
+                        compareModalOverlay.classList.remove('open');
+                    }
+                });
+            }
+
+            // 7. FAQ Accordion Auto-Close
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.addEventListener('toggle', () => {
+                    if (item.open) {
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.open) {
+                                otherItem.removeAttribute('open');
+                            }
+                        });
+                    }
+                });
+            });
+
+            // 8. Contact Form Submit dengan Toast Notification Interaktif
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    showToast('Pesan Terkirim!', 'Terima kasih, tim IGAS STORE akan segera menghubungi Anda kembali.');
+                    contactForm.reset();
+                });
+            }
+
+            // 9. Scroll Reveal Observers (Micro-Interactions)
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+                revealElements.forEach(el => observer.observe(el));
+            } else {
+                revealElements.forEach(el => el.classList.add('revealed'));
+            }
+        });
+    </script>
+</body>
+
+</html>

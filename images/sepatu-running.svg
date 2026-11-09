@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgRun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <linearGradient id="soleRun" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="upperRun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadowRun" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="15" flood-color="#064e3b" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" fill="url(#bgRun)" rx="24"/>
+  <ellipse cx="300" cy="380" rx="220" ry="24" fill="#047857" opacity="0.15"/>
+  <g filter="url(#shadowRun)" transform="translate(40, 20)">
+    <!-- Aerodynamic Sole -->
+    <path d="M90 320 Q180 340 310 330 Q440 325 480 290 Q485 320 460 335 Q400 355 280 355 Q130 355 80 335 Z" fill="url(#soleRun)"/>
+    <path d="M100 325 Q230 340 350 335 Q440 330 465 315 L455 330 Q390 345 280 345 Q150 345 100 325 Z" fill="#ffffff" opacity="0.7"/>
+    <!-- Cushion Wave -->
+    <path d="M120 310 Q220 330 330 320 Q410 315 450 280 L440 260 Q380 300 290 305 Q170 305 110 295 Z" fill="#34d399"/>
+    <!-- Shoe Upper Mesh -->
+    <path d="M110 295 C140 260 210 250 260 220 C290 200 330 150 380 150 C410 150 430 180 440 220 C455 250 455 270 450 280 C400 285 300 290 120 295 Z" fill="url(#upperRun)"/>
+    <!-- Fast Motion Stripes -->
+    <path d="M260 215 L290 290 L320 290 L290 215 Z" fill="#34d399" opacity="0.9"/>
+    <path d="M295 210 L325 285 L350 285 L320 210 Z" fill="#ffffff" opacity="0.85"/>
+    <path d="M330 205 L355 280 L375 280 L350 205 Z" fill="#10b981" opacity="0.9"/>
+    <!-- Collar & Tongue -->
+    <path d="M360 150 C380 145 420 155 435 180 C410 195 385 185 360 150 Z" fill="#334155"/>
+    <circle cx="395" cy="190" r="4" fill="#94a3b8"/>
+    <circle cx="375" cy="210" r="4" fill="#94a3b8"/>
+    <circle cx="355" cy="230" r="4" fill="#94a3b8"/>
+    <!-- Laces -->
+    <path d="M365 200 L400 185 M350 220 L385 200 M335 240 L370 215" stroke="#ecfdf5" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>
